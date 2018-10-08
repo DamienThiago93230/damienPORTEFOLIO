@@ -1,0 +1,11 @@
+/* style test pour la page test.php */
+body{
+    background: rgb(241, 193, 36);
+    border: 10px groove black;
+    margin: 0 auto;
+    width: 1200px;
+    padding: 5px;
+}
+h1{
+    text-align: center;
+}

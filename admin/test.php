@@ -6,13 +6,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="test_style.css">
     <?php 
         // Requête pour une seul info
         $sql = $pdoCV->query(" SELECT * FROM t_utilisateurs "); 
         $ligne_utilisateur = $sql->fetch();    
     ?>
     <title>Admin : <?php echo $ligne_utilisateur['pseudo']; ?></title>
-    <link rel="stylesheet" href="test_style.css">
+    
 </head>
 <body>
     <h1>Test en cours</h1>
@@ -32,7 +33,7 @@
         ?>
             <li><?php echo $ligne_loisir['loisir']; ?></li>
         <?php 
-            }// Fin du while  
+            }// Fin du while
         ?>
     </ul>
 
