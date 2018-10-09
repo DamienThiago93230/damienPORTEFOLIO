@@ -1,6 +1,5 @@
 /* style test pour la page test.php */
 body{
-    background: rgb(241, 193, 36);
     border: 10px groove black;
     margin: 0 auto;
     width: 1200px;
@@ -8,4 +7,27 @@ body{
 }
 h1{
     text-align: center;
+}
+h2{
+    text-align: center;
+}
+.td{
+    color: white;
+}
+.a{
+    color: blue;
+}
+
+.table-bordered{
+    background: grey;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.formulaire{
+    width: 50%;
+    background: grey;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 5px;
 }
