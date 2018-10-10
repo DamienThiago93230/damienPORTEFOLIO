@@ -1,5 +1,16 @@
-/* style test pour la page test.php */
+/* style test pour la page compétences.php */
+
 body{
+    background-image: url(../img/images.jpg);
+}
+
+.navbar{
+    background: black;
+    margin-bottom: 10px;
+}
+
+.container-fluid{
+    background: white;
     border: 10px groove black;
     margin: 0 auto;
     width: 1200px;
@@ -14,20 +25,33 @@ h2{
 .td{
     color: white;
 }
+.href{
+    color: blue;
+}
 .a{
     color: blue;
 }
-
 .table-bordered{
     background: grey;
     text-align: center;
     margin: 0 auto;
+    border: 5px solid black;
 }
-
 .formulaire{
     width: 50%;
     background: grey;
     margin: 0 auto;
     padding: 20px;
     padding-top: 5px;
+    border-radius: 20px;
+    border: 5px solid black;
 }
+/********FIN CSS competences.php***************/
+
+
+
+/* style test pour la page loisirs.php */
+.table{
+    width: 60%;
+}
+

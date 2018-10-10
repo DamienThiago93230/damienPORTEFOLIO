@@ -63,75 +63,84 @@ if(isset($_GET['order']) && isset($_GET['column'])){
     <title>Admin : les compétences</title>
 </head>
 <body>
+<?php require 'inc/navigation.php';?> 
 
-<h1>Les compétences et insertion d'un nouvelle compétence</h1>
-
-    <?php 
-        // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-        $sql = $pdoCV -> prepare("SELECT * FROM t_competences" . $order);
-        $sql -> execute();
-        $nbr_competence = $sql -> rowCount();
-    ?>
-
-    <div class="voir">
-        <table border="1" class="table-bordered">
-            <thead>
-                <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
-                <tr>
-                    <th>Compétences trier de : <a href="competences.php?column=competence&order=asc">A à Z</a> | <a href="competences.php?column=competence&order=desc">Z à A</a> </th> 
-                    <th>Niveaux trier de : <a href="competences.php?column=niveau&order=asc">0 à 100</a> | <a href="competences.php?column=niveau&order=desc"> 100 à 0</a></th> 
-                    <th>Catégories trier de : <a href="competences.php?column=categorie&order=asc">A à Z</a> | <a href="competences.php?column=categorie&order=desc">Z à A</a></th> 
-                    <th>Supprimer </th> 
-                    <th>Modifier </th> 
-                </tr>        
-            </thead>
-            <?php 
-            while($ligne_competence = $sql -> fetch())
-                {
-            ?>
-            <tbody>
-                <tr>
-                    <td class="td"><?php echo $ligne_competence['competence']; ?></td>
-                    <td class="td"><?php echo $ligne_competence['niveau']; ?>/100</td>
-                    <td class="td"><?php echo $ligne_competence['categorie']; ?></td>
-                    <td class="td">
-                        <a href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" class="a">Supprimer</a> 
-                    </td>
-                    <td class="td">
-                        <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" class="a">Modifier</a> 
-                    </td>
-                </tr>
-            <?php 
-                } // Fin du while 
-            ?>
-            </tbody>
-        </table>        
-    </div>
-    <hr>
-    <h2>Formulaire d'insertion d'une compétence</h2>    
-    <!-- Insertion d'un nouveau compétence -->
-    <div class="formulaire">
-        <form action="competences.php" method="post">
-            <div class="form-group">
-                <label for="competence">Compétence</label>
-                <input type="text" name="competence" placeholder="Nouvelle compétence" class="form-control" required>
-            </div>
-            <div class="form-group">
-                <label for="niveau">Niveau</label>
-                <input type="text" name="niveau" placeholder="Niveau en chiffre sur 100"class="form-control"  required>
-            </div>
-            <div class="form-group">
-                <label for="categorie">Catégorie</label>
-                <select name="categorie" id="categorie" class="form-control">
-                    <option value="Développement">Développement</option>
-                    <option value="Infographie">Infographie</option>
-                    <option value="Gestion de projet">Gestion de projet</option>
-                </select>
-            </div>
-            <div class="">
-                <button type="submit" class="btn btn-primary">Insérer une compétence</button>
-            </div>  
-        </form>
-    </div>
+    
+<div class="container-fluid">
+    <h1>Les compétences et insertion d'un nouvelle compétence</h1>
+    
+        <?php 
+            // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
+            $sql = $pdoCV -> prepare("SELECT * FROM t_competences" . $order);
+            $sql -> execute();
+            $nbr_competence = $sql -> rowCount();
+        ?>
+    
+        <div>
+            <table border="1" class="table-bordered">
+                <thead>
+                    <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
+                    <tr>
+                        <th>Compétences trier de : <a href="competences.php?column=competence&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i>
+                        </a> | <a href="competences.php?column=competence&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a> </th> 
+                        <th>Niveaux trier de : <a href="competences.php?column=niveau&order=asc" class="href">0 à 100</a> | <a href="competences.php?column=niveau&order=desc" class="href"> 100 à 0</a></th> 
+                        <th>Catégories trier de : <a href="competences.php?column=categorie&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i></a> | <a href="competences.php?column=categorie&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a></th> 
+                        <th>Supprimer </th> 
+                        <th>Modifier </th> 
+                    </tr>        
+                </thead>
+                <?php 
+                while($ligne_competence = $sql -> fetch())
+                    {
+                ?>
+                <tbody>
+                    <tr>
+                        <td class="td"><?php echo $ligne_competence['competence']; ?></td>
+                        <td class="td"><?php echo $ligne_competence['niveau']; ?>/100</td>
+                        <td class="td"><?php echo $ligne_competence['categorie']; ?></td>
+                        <td class="td">
+                            <a href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" class="a">Supprimer</a> 
+                        </td>
+                        <td class="td">
+                            <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" class="a">Modifier</a> 
+                        </td>
+                    </tr>
+                <?php 
+                    } // Fin du while 
+                ?>
+                </tbody>
+            </table>        
+        </div>
+        <hr>
+        <h2>Formulaire d'insertion d'une compétence</h2>    
+        <!-- Insertion d'un nouveau compétence -->
+        <div class="formulaire">
+            <form action="competences.php" method="post">
+                <div class="form-group">
+                    <label for="competence">Compétence</label>
+                    <input type="text" name="competence" placeholder="Nouvelle compétence" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="niveau">Niveau</label>
+                    <input type="text" name="niveau" placeholder="Niveau en chiffre sur 100" class="form-control"  required>
+                </div>
+                <div class="form-group">
+                    <label for="categorie">Catégorie</label>
+                    <select name="categorie" id="categorie" class="form-control">
+                        <option value="Développement">Développement</option>
+                        <option value="Infographie">Infographie</option>
+                        <option value="Gestion de projet">Gestion de projet</option>
+                    </select>
+                </div>
+                <div class="">
+                    <button type="submit" class="btn btn-primary">Insérer une compétence</button>
+                </div>  
+            </form>
+        </div>
+</div>
+<!-- lien bootstrap -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 </body>
 </html>
