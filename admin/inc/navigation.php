@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-sm navbar-dark">
   <!-- Brand -->
-  <a class="navbar-brand" href="#">SiteCV</a>
+  <a class="navbar-brand" href="index.php">SiteCV</a>
 
   <!-- Links -->
   <ul class="navbar-nav">

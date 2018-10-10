@@ -59,6 +59,7 @@ $ligne_formation = $sql -> fetch(); // Va récupérer les donné
             </div>
             
             <div class="form-group">
+                <input class="form-control" type="hidden" name="id_formation" value="<?php echo $ligne_formation['id_formation']; ?>">
                 <button type="submit" class="btn btn-primary">Insérer un formation</button>
             </div>
         </form>
