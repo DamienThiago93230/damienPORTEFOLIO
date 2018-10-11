@@ -1,14 +1,14 @@
 <?php require 'connexion.php';
 
 // insertion d'un formulaire
-if (isset($_POST['titre_form'])) { // si on a reçu une nouvelle formation
-    if ($_POST['titre_form'] !='' && $_POST['stitre_form'] !='' && $_POST['stitre_form'] !='' && $_POST['dates_form'] !='' && $_POST['description_form'] !='' ) {
+if (isset($_POST['titre_exp'])) { // si on a reçu une nouvelle expation
+    if ($_POST['titre_exp'] !='' && $_POST['stitre_exp'] !='' && $_POST['stitre_exp'] !='' && $_POST['dates_exp'] !='' && $_POST['description_exp'] !='' ) {
 
-        $titre_form = addslashes($_POST['titre_form']);
-        $stitre_form = addslashes($_POST['stitre_form']);
-        $dates_form = addslashes($_POST['dates_form']);
-        $description_form = addslashes($_POST['description_form']);
-        $pdoCV -> exec(" INSERT INTO t_formations VALUES (NULL, '$titre_form', '$stitre_form', '$dates_form', '$description_form', '1') ");
+        $titre_exp = addslashes($_POST['titre_exp']);
+        $stitre_exp = addslashes($_POST['stitre_exp']);
+        $dates_exp = addslashes($_POST['dates_exp']);
+        $description_exp = addslashes($_POST['description_exp']);
+        $pdoCV -> exec(" INSERT INTO t_formations VALUES (NULL, '$titre_exp', '$stitre_exp', '$dates_exp', '$description_exp', '1') ");
 
         header("location: ../admin/formations.php");
         exit(); 
@@ -17,14 +17,14 @@ if (isset($_POST['titre_form'])) { // si on a reçu une nouvelle formation
 } // fin de isset($_POST['formation'])
 
 // Suppression d'un élément(ici : formation) de la BDD
-if (isset($_GET['id_formation'])) // On récupére ce que je supprime dans l'url par son id
+if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'url par son id
 {
-    $efface = $_GET['id_formation']; // je passe l'id dans une variable $efface
-    $sql = " DELETE FROM t_formations WHERE id_formation='$efface' "; // Requête pur supprimer un élément de la BDD
+    $efface = $_GET['id_experience']; // je passe l'id dans une variable $efface
+    $sql = " DELETE FROM t_experiences WHERE id_experience='$efface' "; // Requête pur supprimer un élément de la BDD
 
     $pdoCV -> query($sql); // On peut le faire avec exec() également
 
-    header("location: ../admin/formations.php");
+    header("location: ../admin/experiences.php");
 }// ferme le if isset $_GET pour suppression
 
 ?>
@@ -46,42 +46,42 @@ if (isset($_GET['id_formation'])) // On récupére ce que je supprime dans l'url
 <?php require 'inc/navigation.php';?> 
 
 <div class="container-fluid">
-    <h1>Les informations et insertion d'une nouvelle formation</h1>
+    <h1>Les informations et insertion d'une nouvelle experience</h1>
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-            $sql = $pdoCV -> prepare("SELECT * FROM t_formations");
+            $sql = $pdoCV -> prepare("SELECT * FROM t_experiences");
             $sql -> execute();
-            $nbr_formations = $sql -> rowCount();
+            $nbr_experiences = $sql -> rowCount();
         ?>
     
         <div>
             <table class="table-bordered table">
-            <caption>La liste des formations : <?php echo $nbr_formations; ?></caption>
+            <caption>La liste des experiences : <?php echo $nbr_experiences; ?></caption>
                 <thead>
                     <tr>
-                        <th>Titre formation</th>
+                        <th>Titre experience</th>
                         <th>Sous titre</th>
-                        <th>Date de formation</th>
-                        <th>Description formation</th>
+                        <th>Date de experience</th>
+                        <th>Description experience</th>
                         <th>Modifier</th>
                         <th>Supprimer</th>
                     </tr>        
                 </thead>
                 <?php 
-                while($ligne_formation = $sql -> fetch())
+                while($ligne_experience = $sql -> fetch())
                     {
                 ?>
                 <tbody>
                     <tr>
-                        <td class="td"><?php echo $ligne_formation['titre_form']; ?></td>
-                        <td class="td"><?php echo $ligne_formation['stitre_form']; ?></td>
-                        <td class="td"><?php echo $ligne_formation['dates_form']; ?></td>
-                        <td class="td"><?php echo $ligne_formation['description_form']; ?></td>
+                        <td class="td"><?php echo $ligne_experience['titre_form']; ?></td>
+                        <td class="td"><?php echo $ligne_experience['stitre_form']; ?></td>
+                        <td class="td"><?php echo $ligne_experience['dates_form']; ?></td>
+                        <td class="td"><?php echo $ligne_experience['description_form']; ?></td>
                         <td>
-                            <a class="href" href="modif_formation.php?id_formation=<?php echo $ligne_formation['id_formation']; ?> ">Modifier</a> 
+                            <a class="href" href="modif_experience.php?id_experience=<?php echo $ligne_experience['id_experience']; ?> ">Modifier</a> 
                         </td>
                         <td class="td">
-                            <a class="href" href="formations.php?id_formation=<?php echo $ligne_formation['id_formation']; ?>">Supprimer</a> 
+                            <a class="href" href="experiences.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>">Supprimer</a> 
                         </td>
                     </tr>
                 <?php 
@@ -95,22 +95,22 @@ if (isset($_GET['id_formation'])) // On récupére ce que je supprime dans l'url
         <h2>Formulaire d'insertion d'un formation</h2>
         <!-- Insertion d'un nouveau formation -->
         <div class="formulaire">
-            <form action="formations.php" method="post">
+            <form action="experiences.php" method="post">
                 <div class="form-group">
-                    <label for="titre_form">Titre formation</label>
-                    <input type="text" name="titre_form" placeholder="Nouvelle formation" class="form-control" required>
+                    <label for="titre_exp">Titre experience</label>
+                    <input type="text" name="titre_exp" placeholder="Nouvelle formation" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="stitre_form">formation</label>
-                    <input type="text" name="stitre_form" placeholder="Nouvelle formation" class="form-control" required>
+                    <label for="stitre_exp">experience</label>
+                    <input type="text" name="stitre_exp" placeholder="Nouvelle formation" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="dates_form">Date de formation</label>
-                    <input type="text" name="dates_form" placeholder="Date de formation" class="form-control" required>
+                    <label for="dates_exp">Date de formation</label>
+                    <input type="text" name="dates_exp" placeholder="Date de formation" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <label for="description_form">Description formation</label>
-                    <input type="text" name="description_form" placeholder="Description" class="form-control" required>
+                    <label for="description_exp">Description formation</label>
+                    <input type="text" name="description_exp" placeholder="Description" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="id_utilisateur">Id utilisateur</label>

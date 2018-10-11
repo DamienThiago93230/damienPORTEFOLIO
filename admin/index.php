@@ -14,43 +14,16 @@
 <body>
 <?php require 'inc/navigation.php'; ?>
 
-    <div class="container-fluid">
-    <div id="demo" class="carousel slide" data-ride="carousel">
-
-<!-- Indicators -->
-<ul class="carousel-indicators">
-  <li data-target="#demo" data-slide-to="0" class="active"></li>
-  <li data-target="#demo" data-slide-to="1"></li>
-  <li data-target="#demo" data-slide-to="2"></li>
-</ul>
-
-<!-- The slideshow -->
-<div class="carousel-inner">
-  <div class="carousel-item active">
-    <img src="img/html-code.jpg" alt="Los Angeles">
-  </div>
-  <div class="carousel-item">
-    <img src="chicago.jpg" alt="Chicago">
-  </div>
-  <div class="carousel-item">
-    <img src="ny.jpg" alt="New York">
-  </div>
-</div>
-
-<!-- Left and right controls -->
-<a class="carousel-control-prev" href="#demo" data-slide="prev">
-  <span class="carousel-control-prev-icon"></span>
-</a>
-<a class="carousel-control-next" href="#demo" data-slide="next">
-  <span class="carousel-control-next-icon"></span>
-</a>
-
-</div>
 
 
-
-
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Site porte_folio</h1>
+        <p class="lead">Formation développeur intégrateur Web</p>
+      </div>
     </div>
+    
+
     <!-- lien bootstrap -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>

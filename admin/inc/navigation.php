@@ -22,6 +22,7 @@
         <a class="dropdown-item" href="competences.php">Compétences</a>
         <a class="dropdown-item" href="loisirs.php">Loisirs</a>
         <a class="dropdown-item" href="formations.php">Formations</a>
+        <a class="dropdown-item" href="experiences.php">Experiences pro</a>
       </div>
     </li>
   </ul>

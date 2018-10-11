@@ -5,15 +5,13 @@ body{
 }
 
 .navbar{
-    background: black;
-    margin-bottom: 10px;
+    background: rgb(70, 183, 221);
 }
 
 .container-fluid{
     background: white;
-    border: 10px groove black;
     margin: 0 auto;
-    width: 1200px;
+   
     padding: 5px;
 }
 h1{
@@ -23,7 +21,7 @@ h2{
     text-align: center;
 }
 .td{
-    color: white;
+    color: black;
 }
 .href{
     color: blue;
@@ -32,7 +30,8 @@ h2{
     color: blue;
 }
 .table-bordered{
-    background: grey;
+    width: 60%;
+    background: rgb(81, 192, 230);
     text-align: center;
     margin: 0 auto;
     border: 5px solid black;
@@ -44,7 +43,7 @@ h2{
     padding: 20px;
     padding-top: 5px;
     border-radius: 20px;
-    border: 5px solid black;
+   
 }
 /********FIN CSS competences.php***************/
 
