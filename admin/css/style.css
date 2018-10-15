@@ -1,47 +1,18 @@
 /* style test pour la page compétences.php */
 
-body{
-    background-image: url(../img/images.jpg);
-}
-
 .navbar{
-    background: rgb(70, 183, 221);
+    background: rgb(21, 96, 235);
 }
 
 .container-fluid{
-    background: white;
-    margin: 0 auto;
-   
     padding: 5px;
 }
-h1{
-    text-align: center;
-}
-h2{
-    text-align: center;
-}
-.td{
-    color: black;
-}
-.href{
-    color: blue;
-}
-.a{
-    color: blue;
-}
-.table-bordered{
-    width: 60%;
-    background: rgb(81, 192, 230);
-    text-align: center;
-    margin: 0 auto;
-    border: 5px solid black;
-}
+
 .formulaire{
     width: 50%;
     background: grey;
     margin: 0 auto;
     padding: 20px;
-    padding-top: 5px;
     border-radius: 20px;
    
 }

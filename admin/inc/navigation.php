@@ -1,6 +1,6 @@
 <?php require 'connexion.php';?> 
 
-<nav class="navbar navbar-expand-sm navbar-dark">
+<nav class="navbar navbar-expand-sm navbar-dark text-white">
   <!-- Brand -->
   <a class="navbar-brand" href="index.php">SiteCV</a>
 

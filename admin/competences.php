@@ -49,25 +49,13 @@ if(isset($_GET['order']) && isset($_GET['column'])){
 
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Lien bootstrap CDN -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <!-- Lien fontawasome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Admin : les compétences</title>
-</head>
-<body>
+<!-- Je inc tous le haut de page le Doctype, les meta et les liens -->
+<?php require 'inc/haut_page.php'; ?>
+
+<!-- Je inc la bar de navigation -->
 <?php require 'inc/navigation.php';?> 
 
-    
-<div class="container-fluid">
-    <h1>Les compétences et insertion d'un nouvelle compétence</h1>
+    <h1 class="text-center mb-4 mt-4">Les compétences et insertion d'un nouvelle compétence</h1>
     
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
@@ -76,43 +64,43 @@ if(isset($_GET['order']) && isset($_GET['column'])){
             $nbr_competence = $sql -> rowCount();
         ?>
     
-        <div>
-            <table border="1" class="table-bordered">
-                <thead>
-                    <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
-                    <tr>
-                        <th>Compétences trier de : <a href="competences.php?column=competence&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i>
-                        </a> | <a href="competences.php?column=competence&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a> </th> 
-                        <th>Niveaux trier de : <a href="competences.php?column=niveau&order=asc" class="href">0 à 100</a> | <a href="competences.php?column=niveau&order=desc" class="href"> 100 à 0</a></th> 
-                        <th>Catégories trier de : <a href="competences.php?column=categorie&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i></a> | <a href="competences.php?column=categorie&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a></th> 
-                        <th>Supprimer </th> 
-                        <th>Modifier </th> 
-                    </tr>        
-                </thead>
-                <?php 
-                while($ligne_competence = $sql -> fetch())
-                    {
-                ?>
-                <tbody>
-                    <tr>
-                        <td class="td"><?php echo $ligne_competence['competence']; ?></td>
-                        <td class="td"><?php echo $ligne_competence['niveau']; ?>/100</td>
-                        <td class="td"><?php echo $ligne_competence['categorie']; ?></td>
-                        <td class="td">
-                            <a href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" class="a">Supprimer</a> 
-                        </td>
-                        <td class="td">
-                            <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" class="a">Modifier</a> 
-                        </td>
-                    </tr>
-                <?php 
-                    } // Fin du while 
-                ?>
-                </tbody>
-            </table>        
-        </div>
+       
+    <table class="table table-bordered text-center mx-auto">
+            <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>Compétences trier de : <a href="competences.php?column=competence&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i>
+                    </a> | <a href="competences.php?column=competence&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a> </th> 
+                    <th>Niveaux trier de : <a href="competences.php?column=niveau&order=asc" class="href">0 à 100</a> | <a href="competences.php?column=niveau&order=desc" class="href"> 100 à 0</a></th> 
+                    <th>Catégories trier de : <a href="competences.php?column=categorie&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i></a> | <a href="competences.php?column=categorie&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a></th> 
+                    <th>Modifier </th> 
+                    <th>Supprimer </th> 
+                </tr>        
+            </thead>
+            <?php 
+            while($ligne_competence = $sql -> fetch())
+                {
+            ?>
+            <tbody>
+                <tr>
+                    <td class="td"><?php echo $ligne_competence['competence']; ?></td>
+                    <td class="td"><?php echo $ligne_competence['niveau']; ?>/100</td>
+                    <td class="td"><?php echo $ligne_competence['categorie']; ?></td>
+                    <td class="td">
+                        <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-edit"></i></a> 
+                    </td>
+                    <td class="td">
+                        <a href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-trash-alt text-danger"></i></a> 
+                    </td>
+                </tr>
+            <?php 
+                } // Fin du while 
+            ?>
+            </tbody>
+        </table>        
+        
         <hr>
-        <h2>Formulaire d'insertion d'une compétence</h2>    
+        <h2 class="text-center">Formulaire d'insertion d'une compétence</h2>    
         <!-- Insertion d'un nouveau compétence -->
         <div class="formulaire">
             <form action="competences.php" method="post">
@@ -137,10 +125,6 @@ if(isset($_GET['order']) && isset($_GET['column'])){
                 </div>  
             </form>
         </div>
-</div>
-<!-- lien bootstrap -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-</body>
-</html>
+
+<!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
+<?php require 'inc/bas_page.php'; ?>
