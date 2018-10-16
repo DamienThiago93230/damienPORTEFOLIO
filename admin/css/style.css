@@ -1,4 +1,3 @@
-/* style test pour la page compétences.php */
 
 .navbar{
     background: rgb(21, 96, 235);
@@ -16,8 +15,10 @@
     border-radius: 20px;
    
 }
-/********FIN CSS competences.php***************/
-
+footer{
+    background: rgb(21, 96, 235);
+    color: wheat;
+}
 
 
 /* style test pour la page loisirs.php */

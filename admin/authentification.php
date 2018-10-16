@@ -21,6 +21,7 @@ if (isset($_POST['connexion'])) { // Connexion est le name du button
 
         $_SESSION['connexion_admin'] = 'connecté'; // Connexion pour l'admin
 
+        $_SESSION['id_utilisateur'] = $ligne_utilisateur['id_utilisateur'];
         $_SESSION['email'] = $ligne_utilisateur['email'];
         $_SESSION['nom'] = $ligne_utilisateur['nom'];
         $_SESSION['mdp'] = $ligne_utilisateur['mdp'];
@@ -51,6 +52,5 @@ require_once 'inc/haut_page.php';
     </div>
     
 <?php
-// Je inc le footer et les lien JQuery, JS et bootstrap  
-require_once 'inc/bas_page.php';
+
     

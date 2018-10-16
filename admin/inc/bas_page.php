@@ -4,7 +4,14 @@
   <!-- Footer--> 
   
       <hr>
-      <footer class="text-center">
+      <footer class="text-center p-2">
+          <div class="row">
+          <div class="col-lg-12">
+                  <h4>Me contacter</h4>
+                  <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
+                  <p><strong>Email:</strong> santo.damien@hotmail.com</p>
+              </div>
+          </div>
           <div class="row">
               <div class="col-lg-12">
                   <p>Copyright &copy; Mon siteCV - 2018</p>

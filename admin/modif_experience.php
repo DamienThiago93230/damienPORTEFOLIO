@@ -55,7 +55,7 @@ $ligne_experience = $sql -> fetch(); // va récupérer les données
                </div>
         
                 <div class="form-group">
-                    <button class="btn btn-danger" type="submit">MAJ</button>
+                    <button class="btn btn-primary" type="submit">Modifier</button>
                     <input type="hidden" name="id_experience" value="<?php echo $ligne_experience['id_experience']; ?>">
                 </div>
             </form><!-- fin form -->

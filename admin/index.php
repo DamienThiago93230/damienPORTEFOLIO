@@ -3,12 +3,33 @@
 session_start(); // à mettre dans toutes les pages de l'admin 
 
 if (isset($_SESSION['connexion_admin'])) { // Si on est connecter on récupère les variables de sesion 
+    $id_utilisateur=$_SESSION['id_utilisateur'];
     $email=$_SESSION['email'];
     $mdp=$_SESSION['mdp'];
     $nom=$_SESSION['nom'];
+    // echo $id_utilisateur;
 }else { // Si on est pas connecté on ne peut peut pas se connecter
     header('location:authentification.php');
 }
+// Pour vider les variables de session destruy !
+if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
+    $_SESSION['connexion_admin'] = '';
+    $_SESSION['id_utilisateur'] = '';
+    $_SESSION['email'] = '';
+    $_SESSION['nom'] = '';
+    $_SESSION['mdp'] = '';
+
+    unset($_SESSION['connexion_admin']); // unset détruit la variable connexion_admin
+    session_destroy(); // On detruit la session
+
+    header('location:authentification.php');
+}
+
+// Récupère les données de l'utilisateur par son id
+$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs where id_utilisateur = '$id_utilisateur'"); 
+$ligne_utilisateur = $sql-> fetch();
+
+
 
 ?>
 
@@ -22,13 +43,16 @@ if (isset($_SESSION['connexion_admin'])) { // Si on est connecter on récupère 
 <?php require 'inc/navigation.php'; ?>
 
 
+
 <!-- Je met le contenu de la page -->
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Site porte_folio</h1>
-        <p class="lead">Formation développeur intégrateur Web</p>
-      </div>
-    </div>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1>Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>      
+    <p>Développeur intégrateur Web</p>
+  </div>
+</div>
+
+
 
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php'; ?>

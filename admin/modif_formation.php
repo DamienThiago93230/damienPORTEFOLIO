@@ -29,7 +29,7 @@ require_once 'inc/navigation.php';
        
     
         
-        <h1 >Mise à jour de la formation : <?= $ligne_form['titre_form']; ?></h1>
+        <h1 class="text-center mb-4">Mise à jour de la formation : <?= $ligne_form['titre_form']; ?></h1>
         <div class="formulaire">
         <!-- Mise à jour d'un titre_form -->
         <form action="modif_formation.php" method="post" class="px-4 py-3">
@@ -56,7 +56,7 @@ require_once 'inc/navigation.php';
         
             <div>
                 <input type="hidden" name="id_formation" value="<?= $ligne_form['id_formation']; ?>">
-                <button type="submit" class="btn btn-success">Mettre à jour</button>
+                <button type="submit" class="btn btn-primary">Modifier</button>
             </div>
         
         </form>

@@ -30,7 +30,7 @@ $ligne_loisir = $sql -> fetch(); // Va récupérer les donné
         <div class="formulaire mt-4">
             <form action="modif_loisir.php" method="post">
                 <div class="form-group">
-                    <label for="loisir"><h1>Modifier loisir</h1></label>
+                    <label for="loisir"><h1 class="text-center mb-4">Modifier loisir</h1></label>
                     <input class="form-control" type="text" name="loisir" value="<?php echo $ligne_loisir['loisir']; ?>" required>
                 </div>
                 <div class="form-group">
