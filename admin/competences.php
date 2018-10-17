@@ -13,7 +13,7 @@ if (isset($_SESSION['connexion_admin'])) { // Si on est connecter on récupère 
 }else { // Si on est pas connecté on ne peut peut pas se connecter
     header('location:authentification.php');
 }
-// Pour vider les variables de session destruy !
+// Pour vider les variables de session destroy !
 if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
     $_SESSION['connexion_admin'] = '';
     $_SESSION['id_utilisateur'] = '';
@@ -28,7 +28,7 @@ if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
 }
 
 // Récupère les données de l'utilisateur par son id
-$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs where id_utilisateur = '$id_utilisateur'"); 
+$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'"); 
 $ligne_utilisateur = $sql-> fetch();
 
 
@@ -39,7 +39,7 @@ if (isset($_POST['competence']) && $_POST['niveau'] != '' && $_POST['categorie']
     $niveau = addslashes ($_POST['niveau']);
     $categorie = addslashes ($_POST['categorie']);
 
-    $pdoCV -> exec(" INSERT INTO t_competences VALUES (NULL, '$competence', '$niveau', '$categorie', '1')");
+    $pdoCV -> exec(" INSERT INTO t_competences VALUES (NULL, '$competence', '$niveau', '$categorie', '$id_utilisateur')");
 
     header("location: ../admin/competences.php");
      
@@ -87,11 +87,18 @@ if(isset($_GET['order']) && isset($_GET['column'])){
 <!-- Je inc la bar de navigation -->
 <?php require 'inc/navigation.php';?> 
 
-    <h1 class="text-center mb-4 mt-4">Les compétences et insertion d'un nouvelle compétence</h1>
+    <div class="jumbotron text-center mb-4">
+        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
+        <p class="lead">Vous etes sur la page compétences.</p>
+        <hr class="my-4">
+        <p>Découvrez mes compétences .</p>
+    </div>
+
+    <h1 class="text-center mb-4 mt-4">Mes compétences</h1>
     
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-            $sql = $pdoCV -> prepare("SELECT * FROM t_competences" . $order);
+            $sql = $pdoCV -> prepare("SELECT * FROM t_competences WHERE id_utilisateur = '$id_utilisateur' $order" );
             $sql -> execute();
             $nbr_competence = $sql -> rowCount();
         ?>
@@ -132,9 +139,9 @@ if(isset($_GET['order']) && isset($_GET['column'])){
         </table>        
         
         <hr>
-        <h2 class="text-center">Formulaire d'insertion d'une compétence</h2>    
         <!-- Insertion d'un nouveau compétence -->
-        <div class="formulaire">
+        <div class="formulaire text-center mx-auto">
+        <h2 class="text-center">Formulaire d'insertion d'une compétence</h2>    
             <form action="competences.php" method="post">
                 <div class="form-group">
                     <label for="competence">Compétence</label>
@@ -153,7 +160,10 @@ if(isset($_GET['order']) && isset($_GET['column'])){
                     </select>
                 </div>
                 
-                <button type="submit" class="btn btn-primary">Validez</button>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Insérer la compétence</button>
+                </div>
+                
                   
             </form>
         </div>

@@ -12,6 +12,10 @@ if (isset($_SESSION['connexion_admin'])) { // Si on est connecter on récupère 
     header('location:authentification.php');
 }
 
+// Récupère les données de l'utilisateur par son id
+$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'"); 
+$ligne_utilisateur = $sql-> fetch();
+
 
 // Pour vider les variables de session destruy !
 if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
@@ -27,16 +31,12 @@ if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
     header('location:authentification.php');
 }
 
-// Récupère les données de l'utilisateur par son id
-$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs where id_utilisateur = '$id_utilisateur'"); 
-$ligne_utilisateur = $sql-> fetch();
-
 
 // Insertion d'un loisir en BDD
 if (isset($_POST['loisir']) && $_POST['loisir'] != '') // Si on à reçu un nouveau loisir
 {
     $loisir = addslashes ($_POST['loisir']);
-    $pdoCV -> exec(" INSERT INTO t_loisirs VALUES (NULL, '$loisir', '1')");
+    $pdoCV -> exec(" INSERT INTO t_loisirs VALUES (NULL, '$loisir', '$id_utilisateur')");
 
     header("location: ../admin/loisirs.php");
      
@@ -61,12 +61,19 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
 
 <?php require 'inc/navigation.php';?> 
 
+    <div class="jumbotron text-center mb-4">
+        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
+        <p class="lead">Vous etes sur la page loisirs.</p>
+        <hr class="my-4">
+        <p>Découvrez mes passions .</p>
+    </div>
+
 
     <div class="text-center table-responsive table-hover mt-4">
         <h1 class="text-center mb-4">Les loisirs et insertion d'un nouveau loisir</h1>
             <?php 
                 // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-                $sql = $pdoCV -> prepare("SELECT * FROM t_loisirs");
+                $sql = $pdoCV -> prepare("SELECT * FROM t_loisirs WHERE id_utilisateur ='$id_utilisateur'");
                 $sql -> execute();
                 $nbr_loisirs = $sql -> rowCount();
             ?>
@@ -102,16 +109,16 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
             </table>
             
             <hr>
-            <h2 class="text-center">Formulaire d'insertion d'un loisir</h2>
             <!-- Insertion d'un nouveau loisir -->
-            <div class="formulaire">
+            <div class="formulaire mx-auto">
+            <h2 class="text-center">Formulaire d'insertion d'un loisir</h2>
                 <form action="loisirs.php" method="post">
                     <div class="form-group">
                         <label for="loisir">Loisir</label>
                         <input type="text" name="loisir" placeholder="Nouveau loisir" class="form-control" required>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Insérer un loisir</button>
+                        <button type="submit" class="btn btn-primary" >Insérer le loisir</button>
                     </div>
                 </form>
             </div>

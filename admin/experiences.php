@@ -26,11 +26,8 @@ if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
 }
 
 // Récupère les données de l'utilisateur par son id
-$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs where id_utilisateur = '$id_utilisateur'"); 
+$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'"); 
 $ligne_utilisateur = $sql-> fetch();
-
-
-
 
 
 // insertion d'un formulaire
@@ -41,7 +38,7 @@ if (isset($_POST['titre_exp'])) { // si on a reçu une nouvelle expation
         $stitre_exp = addslashes($_POST['stitre_exp']);
         $dates_exp = addslashes($_POST['dates_exp']);
         $description_exp = addslashes($_POST['description_exp']);
-        $pdoCV -> exec(" INSERT INTO t_experiences VALUES (NULL, '$titre_exp', '$stitre_exp', '$dates_exp', '$description_exp', '1') ");
+        $pdoCV -> exec(" INSERT INTO t_experiences VALUES (NULL, '$titre_exp', '$stitre_exp', '$dates_exp', '$description_exp', '$id_utilisateur') ");
 
         header("location: ../admin/experiences.php");
         exit(); 
@@ -68,11 +65,17 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
 <!-- Je inc la bar de navigation -->
 <?php require 'inc/navigation.php';?> 
 
+    <div class="jumbotron text-center mb-4">
+        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
+        <p class="lead">Vous etes sur la page expériences.</p>
+        <hr class="my-4">
+        <p>Découvrez mes expériences .</p>
+    </div>
 
-    <h1 class="text-center mb-4 mt-4">Les experiences et insertion d'une nouvelle experience</h1>
+    <h1 class="text-center mb-4 mt-4">Mes experiences</h1>
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-            $sql = $pdoCV -> prepare("SELECT * FROM t_experiences");
+            $sql = $pdoCV -> prepare("SELECT * FROM t_experiences WHERE id_utilisateur = '$id_utilisateur'");
             $sql -> execute();
             $nbr_experiences = $sql -> rowCount();
         ?>
@@ -115,9 +118,9 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
         </div>
         
         <hr>
-        <h2 class="text-center mb-4">Formulaire d'insertion d'un formation</h2>
         <!-- Insertion d'un nouveau formation -->
-        <div class="formulaire">
+        <div class="formulaire text-center mx-auto">
+        <h2 class="text-center mb-4">Formulaire d'insertion d'une expérience</h2>
             <form action="experiences.php" method="post">
                 <div class="form-group">
                     <label for="titre_exp">Titre experience</label>
@@ -136,7 +139,7 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
                     <input type="text" name="description_exp" placeholder="Description" class="form-control" required>
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Insérer un experience</button>
+                    <button type="submit" class="btn btn-primary">Insérer votre expérience</button>
                 </div>
             </form>
         </div>

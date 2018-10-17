@@ -1,5 +1,6 @@
 <?php require 'connexion.php';?> 
 
+
 <nav class="navbar navbar-expand-sm navbar-dark text-white">
     <!-- Brand -->
     <a class="navbar-brand" href="index.php">Accueil </a>
@@ -9,7 +10,7 @@
 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Profil
+        Profil <?php echo $ligne_utilisateur['prenom']; ?>
       </a>
       <div class="dropdown-menu">
         <a class="dropdown-item" href="competences.php">Compétences</a>

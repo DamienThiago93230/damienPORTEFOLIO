@@ -26,7 +26,7 @@ if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
 }
 
 // Récupère les données de l'utilisateur par son id
-$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs where id_utilisateur = '$id_utilisateur'"); 
+$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'"); 
 $ligne_utilisateur = $sql-> fetch();
 
 
@@ -43,14 +43,19 @@ $ligne_utilisateur = $sql-> fetch();
 <?php require 'inc/navigation.php'; ?>
 
 
-
 <!-- Je met le contenu de la page -->
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1>Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>      
-    <p>Développeur intégrateur Web</p>
-  </div>
+<div class="jumbotron text-center mb-4">
+  <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
+  <p class="lead">Développeur intégrateur Web.</p>
+  <hr class="my-4">
+  <p>Bienvenue sur mon siteCV .</p>
 </div>
+
+<h1 class="display-4 text-center"><img src="img/developpement-web-aris-web.jpg" width='80%' alt=""></h1>
+  
+
+
+
 
 
 

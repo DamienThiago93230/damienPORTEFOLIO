@@ -39,7 +39,7 @@ if(isset($_POST['titre_form'])){// si on a reçu un nouveau competence
         $stitre_form = addslashes($_POST['stitre_form']);
         $dates_form = addslashes($_POST['dates_form']);
         $description_form = addslashes($_POST['description_form']);
-        $pdoCV -> exec("INSERT INTO t_formations VALUES (NULL, '$titre_form', '$stitre_form', '$dates_form', '$description_form', '1')");
+        $pdoCV -> exec("INSERT INTO t_formations VALUES (NULL, '$titre_form', '$stitre_form', '$dates_form', '$description_form', '$id_utilisateur')");
 
         header("location: ../admin/formations.php");
         exit();
@@ -84,17 +84,24 @@ require_once 'inc/navigation.php';
 
 <?php
 // requête pour compter et cherhcer plusieurs enregistrements
-$sql = $pdoCV -> prepare("SELECT * FROM t_formations".$order);
+$sql = $pdoCV -> prepare("SELECT * FROM t_formations WHERE id_utilisateur = '$id_utilisateur' $order");
 $sql -> execute();
 $nbr_formations = $sql -> rowCount(); ?>
 
+    <div class="jumbotron text-center mb-4">
+        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
+        <p class="lead">Vous etes sur la page formations.</p>
+        <hr class="my-4">
+        <p>Découvrez mes formations.</p>
+    </div>
 
     <!-- div pour le tableau -->
     <div class="text-center table-responsive table-hover mt-4 ">
 
-        <h1 class="mb-4">Mes formations</h1>
+        <h1 class=" mb-4">Mes formations</h1>
 
         <table class="table table-bordered mb-4 mx-auto">
+        <caption>La liste des formations : <?php echo $nbr_formations; ?></caption>
             <thead class="thead-dark">
                 <tr>
                     <th>Titre Formations <a href="formations.php?column=titre_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=titre_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
@@ -123,39 +130,38 @@ $nbr_formations = $sql -> rowCount(); ?>
         </table>
         <hr>
         
-        <p>Nombre de formations ajoutés : <?= $nbr_formations; ?></p>
     </div> <!-- Fin div tableau -->
     
     <!-- Formulaire insertion d'une nouvelle formation -->
     
-        <div class="formulaire">
-            <h2 class="text-center">Ajouter une formation</h2>
+        <div class="formulaire text-center mx-auto">
+            <h2 class="text-center">Formulaire d'insertion d'une formation</h2>
             
             <form action="formations.php" method="post" class="px-4 py-3">
                 
                 <div class="form-group">
-                    <label for="titre_form">Titre :</label>
-                    <input type="text" class="form-control" name="titre_form" placeholder="WordPress Développeur" required>
+                    <label for="titre_form">Titre </label>
+                    <input type="text" class="form-control" name="titre_form" placeholder="Développeur Intégrateur Web" required>
                 </div>
             
                 <div class="form-group">
-                    <label for="stitre_form">Sous-titre :</label>
-                    <input type="text" class="form-control" name="stitre_form" placeholder="Simplon.co Paris" required>
+                    <label for="stitre_form">Sous-titre </label>
+                    <input type="text" class="form-control" name="stitre_form" placeholder="ThiagoKaylie.co Paris" required>
                 </div>
     
                 <div class="form-group">
-                    <label for="dates_form">Dates :</label>
-                    <input type="text" class="form-control" name="dates_form" placeholder="Juin - Oct. 2018" required>
+                    <label for="dates_form">Dates </label>
+                    <input type="text" class="form-control" name="dates_form" placeholder="01/2017 à 11/2017" required>
                 </div>        
                 
     
                 <div class="form-group">
-                    <label for="description_form" class="d-block">Description :</label>
+                    <label for="description_form" class="d-block">Description </label>
                     <textarea name="description_form" class="form-control" placeholder="Création de sites sous WordPress"></textarea>
                 </div>
             
                 <div>
-                    <button type="submit" class="btn btn-primary">Insérer une compétence</button>
+                    <button type="submit" class="btn btn-primary">Insérer la formation</button>
                 </div>
             
             </form>

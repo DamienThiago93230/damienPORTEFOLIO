@@ -1,5 +1,36 @@
 <?php require 'connexion.php'; 
 
+session_start(); // à mettre dans toutes les pages de l'admin 
+
+if (isset($_SESSION['connexion_admin'])) { // Si on est connecter on récupère les variables de sesion 
+    $id_utilisateur=$_SESSION['id_utilisateur'];
+    $email=$_SESSION['email'];
+    $mdp=$_SESSION['mdp'];
+    $nom=$_SESSION['nom'];
+    // echo $id_utilisateur;
+}else { // Si on est pas connecté on ne peut peut pas se connecter
+    header('location:authentification.php');
+}
+
+// Récupère les données de l'utilisateur par son id
+$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'"); 
+$ligne_utilisateur = $sql-> fetch();
+
+
+// Pour vider les variables de session destruy !
+if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
+    $_SESSION['connexion_admin'] = '';
+    $_SESSION['id_utilisateur'] = '';
+    $_SESSION['email'] = '';
+    $_SESSION['nom'] = '';
+    $_SESSION['mdp'] = '';
+
+    unset($_SESSION['connexion_admin']); // unset détruit la variable connexion_admin
+    session_destroy(); // On detruit la session
+
+    header('location:authentification.php');
+}
+
 // gestion mise à jour d'une information
 if (isset($_POST['competence'])) { 
 
@@ -29,7 +60,7 @@ $ligne_competence = $sql -> fetch(); // va récupérer les données
     
         <h1 class="text-center">Mise à jour d'une compétence</h1>
         <!-- Mise à jour d'une nouvelle compétence formulaire  -->
-        <div class="formulaire ">
+        <div class="formulaire mx-auto text-center">
             <form action="modif_competence.php" method="post">
                <div class="form-group">
                     <label for="competence">Compétences</label>                
@@ -43,7 +74,7 @@ $ligne_competence = $sql -> fetch(); // va récupérer les données
         
                <div class="form-group">
                     <label for="categorie">Catégorie</label>                
-                    <select name="categorie">
+                    <select name="categorie" class="form-control">
                         <!-- Développement -->
                         <option value="Développement"
                             <?php // pour ajouter select="selected" à la balise option si c'est la catégorie de la compétence

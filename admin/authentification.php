@@ -34,22 +34,66 @@ if (isset($_POST['connexion'])) { // Connexion est le name du button
 require_once 'inc/haut_page.php';
 
 ?>
-    <h1 class="text-center mb-4 mt-4">Admin : authentification</h1>
-       <div class="formulaire">
-        <form action="authentification.php" method="post">
-            <div class="form-group">
-                <label for="email">Votre email</label>
-                <input type="email" name="email" id="email" placeholder="Votre email" class="form-control" required>
-            </div>
     
-            <div class="form-group">
-                <label for="mdp">Votre mdp</label>
-                <input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe" class="form-control" required>
-            </div>
+	
+		<main>
+			<div class="container-fluid">
+				<div class="row login">
+					<div class="col-sm-6 col-md-4 col-md-offset-4">
+						<div class="panel panel-default bg-danger">
+							<div class="panel-heading">
+								<strong>Connectez-vous pour continuer</strong>
+							</div>
+							<div class="panel-body">
+								<form role="form" action="authentification.php" method="POST">
+									<fieldset>
+										<div class="row">
+											<div class="center-block">
+												<img class="profile-img"
+													src="img/login.jpg?sz=120" alt="">
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-sm-12 col-md-10  col-md-offset-1 ">
+												<div class="form-group">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="glyphicon glyphicon-user"></i>
+														</span> 
+														<input type="email" name="email" id="email" placeholder="Votre email" class="form-control" required autofocus>
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="input-group">
+														<span class="input-group-addon">
+															<i class="glyphicon glyphicon-lock"></i>
+														</span>
+														<input type="password" name="mdp" id="mdp" placeholder="Votre mot de passe" class="form-control" required>
+													</div>
+												</div>
+												<div class="form-group">
+													<input type="submit" name="connexion" class="btn btn-lg btn-primary btn-block" value="connexion">
+												</div>
+											</div>
+										</div>
+									</fieldset>
+								</form>
+							</div>
+							<div class="panel-footer ">
+		                    Vous n'avez pas de compte!<a href="inscription.php" onClick="">  Inscrivez - vous ici  </a>
+							</div>
+		                </div>
+					</div>
+				</div>
+			</div>
+	    
+		</main>
+
+
+
+
+
     
-            <button type="submit" name="connexion" class="btn btn-primary">Se connecter</button>
-        </form> 
-    </div>
     
 <?php
 
