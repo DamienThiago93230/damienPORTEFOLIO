@@ -107,7 +107,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
     <table class="table table-bordered text-center mx-auto">
             <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
             <thead class="thead-dark">
-                <tr>
+                <tr class="text-center">
                     <th>Compétences trier de : <a href="competences.php?column=competence&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i>
                     </a> | <a href="competences.php?column=competence&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a> </th> 
                     <th>Niveaux trier de : <a href="competences.php?column=niveau&order=asc" class="href">0 à 100</a> | <a href="competences.php?column=niveau&order=desc" class="href"> 100 à 0</a></th> 

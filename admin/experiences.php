@@ -136,7 +136,12 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
                 </div>
                 <div class="form-group">
                     <label for="description_exp">Description experience</label>
-                    <input type="text" name="description_exp" placeholder="Description" class="form-control" required>
+                    <textarea type="text" name="description_exp" id="description_exp" class="form-control" required></textarea>
+                    <script>
+                        // Replace the <textarea id="description_form"> with a CKEditor
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'description_exp' );
+                    </script>
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Insérer votre expérience</button>

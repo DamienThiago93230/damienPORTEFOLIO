@@ -1,7 +1,7 @@
 <?php require 'connexion.php';?> 
 
 
-<nav class="navbar navbar-expand-sm navbar-dark text-white">
+<nav class="navbar navbar-expand-sm navbar-dark text-white mb-0">
     <!-- Brand -->
     <a class="navbar-brand" href="index.php">Accueil </a>
 

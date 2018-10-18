@@ -62,7 +62,7 @@ $ligne_experience = $sql -> fetch(); // va récupérer les données
 
     <h1 class="text-center mb-4">Mise à jour d'une expérience</h1>
     <!-- Mise à jour d'une nouvelle compétence formulaire  -->
-    <div class="formulaire">
+    <div class="formulaire text-center ">
         <div class="form-group"><!-- Début .form-group -->
             <form action="modif_experience.php" method="post">
                <div class="form-group">
@@ -82,7 +82,12 @@ $ligne_experience = $sql -> fetch(); // va récupérer les données
     
                <div class="form-group">
                     <label for="description_exp">Description de l'expérience</label>                
-                    <input class="form-control" name="description_exp" value="<?php echo $ligne_experience['description_exp']; ?>"></textarea>
+                    <textarea type="text" class="form-control" name="description_exp"><?php echo $ligne_experience['description_exp']; ?></textarea>
+                    <script>
+                        // Replace the <textarea id="description_form"> with a CKEditor
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'description_exp' );
+                    </script>
                </div>
         
                 <div class="form-group">

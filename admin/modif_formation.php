@@ -81,7 +81,12 @@ require_once 'inc/navigation.php';
 
             <div class="form-group">
                 <label for="description_form">description</label>
-                <input type="text" name="description_form" class="form-control" value="<?= $ligne_form['description_form']; ?>">
+                <textarea type="text" name="description_form" class="form-control"><?= $ligne_form['description_form']; ?></textarea>
+                <script>
+                        // Replace the <textarea id="description_form"> with a CKEditor
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'description_form' );
+                    </script>
             </div>
         
         

@@ -1,26 +1,33 @@
 
 .navbar{
-    background: rgb(21, 96, 235);
+    background: black;
 }
 
 .container-fluid{
     padding: 5px;
 }
 
+.jumbotron{
+    background-image: url(../img/jumbotron3.png);
+    color: wheat;
+}
+
 .formulaire{
     
     font-family: 'Roboto Slab', serif;
     width: 50%;
-    background: grey;
+    background-image: url(../img/jumbotron3.png);
     margin: 0 auto;
     padding: 20px;
     border-radius: 20px;
+    color: wheat;
    
 }
 footer{
-    background: rgb(21, 96, 235);
+    background: black;
     color: wheat;
 }
+
 
 h1{
     font-family: 'Roboto Slab', serif;
@@ -63,5 +70,13 @@ h2{
 main{
     min-height: 100vh;
     background: pink;
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    border-top-color: rgb(50, 56, 62);
+    text-align: center;
 }
 

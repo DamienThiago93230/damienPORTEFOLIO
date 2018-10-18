@@ -98,7 +98,7 @@ $nbr_formations = $sql -> rowCount(); ?>
     <!-- div pour le tableau -->
     <div class="text-center table-responsive table-hover mt-4 ">
 
-        <h1 class=" mb-4">Mes formations</h1>
+        <h1 class="mb-4">Mes formations</h1>
 
         <table class="table table-bordered mb-4 mx-auto">
         <caption>La liste des formations : <?php echo $nbr_formations; ?></caption>
@@ -157,7 +157,12 @@ $nbr_formations = $sql -> rowCount(); ?>
     
                 <div class="form-group">
                     <label for="description_form" class="d-block">Description </label>
-                    <textarea name="description_form" class="form-control" placeholder="Création de sites sous WordPress"></textarea>
+                    <textarea type="text" name="description_form" id="description_form" class="form-control"></textarea>
+                    <script>
+                        // Replace the <textarea id="description_form"> with a CKEditor
+                        // instance, using default configuration.
+                        CKEDITOR.replace( 'description_form' );
+                    </script>
                 </div>
             
                 <div>
