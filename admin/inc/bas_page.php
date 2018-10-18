@@ -17,9 +17,11 @@
                     <a><strong>Email:</strong> santo.damien@hotmail.com</p>
                 </div>
                 <div class="col-lg-4">
-                <h4 style="color: gold">Me contacter</h4>
-                    <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
-                    <a><strong>Email:</strong> santo.damien@hotmail.com</p>
+                <h4 style="color: gold">Réseaux</h4>
+                    <p>
+                        <a href=""><i class="fab fa-github"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    </p>
                 </div>
                 <div class="col-lg-4">
                 <h4 style="color: gold">Me contacter</h4>
@@ -27,7 +29,7 @@
                     <a><strong>Email:</strong> santo.damien@hotmail.com</p>
                 </div>
                 
-              <div class="col">
+              <div class="col-lg-12">
                   <p  class="text-center">Copyright &copy; Mon siteCV - 2018</p>
               </div>
           
