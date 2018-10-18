@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <h1>Test</h1>
+    <h1>Test1</h1>
     <?php    
             $sql = $pdoCV->query("SELECT * FROM t_users");
             $line_user = $sql->fetch();    ?>    <?php
