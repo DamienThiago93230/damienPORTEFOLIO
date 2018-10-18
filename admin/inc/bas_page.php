@@ -28,13 +28,13 @@
                     <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
                     <a><strong>Email:</strong> santo.damien@hotmail.com</p>
                 </div>
+            </div><!-- Fin .row -->
                 
               <div class="col-lg-12">
-                  <p  class="text-center">Copyright &copy; Mon siteCV - 2018</p>
+                  <p >Copyright &copy; Mon siteCV - 2018</p>
               </div>
           
                 
-            </div>
             
 
       </footer>
