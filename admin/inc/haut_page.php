@@ -24,7 +24,7 @@
     
     
     
-    <title>Index</title>
+    <title>SiteCV</title>
 </head>
 <body>
     <div class="container-fluid">

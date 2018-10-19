@@ -10,10 +10,10 @@
 .jumbotron{
     background-image: url(../img/jumbotron3.png);
     color: wheat;
+    
 }
 
 .formulaire{
-    
     font-family: 'Roboto Slab', serif;
     width: 50%;
     background-image: url(../img/jumbotron3.png);
@@ -21,13 +21,17 @@
     padding: 20px;
     border-radius: 20px;
     color: wheat;
-   
 }
+
 footer{
     background: black;
     color: wheat;
 }
 
+.reseaux{
+    letter-spacing: 3px;
+    font-size: 40px;
+}
 
 h1{
     font-family: 'Roboto Slab', serif;
@@ -60,7 +64,7 @@ h2{
 	-moz-border-radius: 50%;
 	-webkit-border-radius: 50%;
     border-radius: 50%;
-    margin-left: 150px;
+    margin-left: 240px;
 }
 
 .login{
@@ -69,7 +73,7 @@ h2{
 
 main{
     min-height: 100vh;
-    background: pink;
+    background-image: url(../img/jumbotron3.png);
 }
 
 .table .thead-dark th {

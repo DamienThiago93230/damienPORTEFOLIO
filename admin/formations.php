@@ -123,6 +123,7 @@ $nbr_formations = $sql -> rowCount(); ?>
                     <td> <a href="modif_formation.php?id_formation=<?= $ligne_formation['id_formation'];?>"><i class="fas fa-edit"></i></a></td>
                     <td> <a href="formations.php?id_formation=<?= $ligne_formation['id_formation'];?>"><i class="fas fa-trash-alt text-danger"></i></a></td>
                 </tr>
+                
             <?php 
                 } // Fin de la boucle while
             ?>

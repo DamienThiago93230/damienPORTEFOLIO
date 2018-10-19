@@ -17,6 +17,7 @@
         <a class="dropdown-item" href="loisirs.php">Loisirs</a>
         <a class="dropdown-item" href="formations.php">Formations</a>
         <a class="dropdown-item" href="experiences.php">Experiences pro</a>
+        <a class="dropdown-item" href="messages.php">Message</a>
       </div>
     </li>
 
@@ -28,7 +29,7 @@
       <a class="nav-link" href="connexion.php">Connexion</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="../admin/index.php?quitter=oui" title="déconnecter vous ! ">Déconnexion <i class="fas fa-sign-out-alt"></i></a>
+      <a class="nav-link" href="../admin/index.php?quitter=oui" title="déconnecter vous ! ">Déconnexion <i style="color: red" class="fas fa-sign-out-alt"></i></a>
     </li>
   
     <!-- Dropdown -->
