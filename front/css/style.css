@@ -1,0 +1,118 @@
+
+.navbar{
+    background: black;
+    font-family: 'Cinzel', serif;
+    
+}
+
+.container-fluid{
+    padding: 5px;
+}
+
+.jumbotron{
+    background-image: url(../img/jumbotron4.png);
+    color: wheat;
+    
+}
+
+.formulaire{
+    font-family: 'Roboto Slab', serif;
+    width: 50%;
+    background-image: url(../img/jumbotron4.png);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: wheat;
+}
+
+footer{
+    background: black;
+    color: wheat;
+}
+
+.reseaux{
+    letter-spacing: 3px;
+    font-size: 40px;
+}
+p{
+    font-family: 'Cinzel', serif;
+}
+
+h1{
+    font-family: 'Diplomata', cursive;
+}
+
+h2{
+    
+    font-family: 'Cinzel', serif;
+}
+
+.table{
+    width: 60%;
+    font-size: 15px;
+    font-family: 'Cinzel', serif;
+}
+
+/* style test pour la page authentification.php */
+
+.panel-heading {
+    padding: 5px 15px;
+}
+
+.panel-footer {
+	padding: 1px 15px;
+	color: #A0A0A0;
+}
+
+.profile-img {
+	width: 120px;
+	height: 120px;
+	margin: 0 auto 10px;
+	display: block;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+    border-radius: 50%;
+    margin-left: 240px;
+}
+
+.login{
+    margin-top: 25vh;
+}
+
+main{
+    min-height: 100vh;
+    background-image: url(../img/jumbotron4.png);
+}
+
+.table .thead-dark th {
+    color: #fff;
+    background-color: #212529;
+    border-color: #32383e;
+    border-top-color: rgb(50, 56, 62);
+    text-align: center;
+    background-image: url(../img/jumbotron4.png);
+}
+
+/* page loisir */
+.l{
+    width: 100%;/* Pour la taille du tableau loisir */
+}
+
+.row {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+/* page formation */
+.card-header{
+    background-image: url(../img/jumbotron4.png);
+    font-family: 'Cinzel', serif;
+}
+
+.ml-5, .mx-5 {
+    margin-left: 8rem !important;
+}
+
+
+
+
