@@ -4,6 +4,9 @@
     font-family: 'Cinzel', serif;
     
 }
+.nav-link{
+    color: #fff !important;
+}
 
 .container-fluid{
     padding: 5px;
@@ -12,7 +15,6 @@
 .jumbotron{
     background-image: url(../img/jumbotron4.png);
     color: wheat;
-    
 }
 
 .formulaire{
@@ -53,35 +55,9 @@ h2{
     font-family: 'Cinzel', serif;
 }
 
-/* style test pour la page authentification.php */
-
-.panel-heading {
-    padding: 5px 15px;
-}
-
-.panel-footer {
-	padding: 1px 15px;
-	color: #A0A0A0;
-}
-
-.profile-img {
-	width: 120px;
-	height: 120px;
-	margin: 0 auto 10px;
-	display: block;
-	-moz-border-radius: 50%;
-	-webkit-border-radius: 50%;
-    border-radius: 50%;
-    margin-left: 240px;
-}
-
-.login{
-    margin-top: 25vh;
-}
-
 main{
     min-height: 100vh;
-    background-image: url(../img/jumbotron4.png);
+    
 }
 
 .table .thead-dark th {
@@ -92,6 +68,8 @@ main{
     text-align: center;
     background-image: url(../img/jumbotron4.png);
 }
+
+
 
 /* page loisir */
 .l{

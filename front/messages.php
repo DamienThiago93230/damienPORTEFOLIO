@@ -12,7 +12,7 @@ if(isset($_POST['nom'])){// si on a reçu un nouveau
         $message = addslashes($_POST['message']);
         $pdoCV -> exec("INSERT INTO t_messages VALUES (NULL, '$nom', '$email', '$sujet', '$message')");
 
-        header("location: ../admin/index.php");
+        header("location: ../front/index.php");
         exit();
 
     } // fin if !=""
@@ -38,9 +38,10 @@ require_once 'inc/haut_page.php';
 
 ?>
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Contacter moi.</h1>
-        <p class="lead">Vous etes sur la page messages.</p>
+        <h1 class="display-4">Contactez moi.</h1>
         <hr class="my-4">
+        <p>24H/24 || 7j/7</p>
+        <p>Réponse sous 24H</p>
     </div>
     <hr>
 
@@ -49,7 +50,7 @@ require_once 'inc/haut_page.php';
     <!-- Formulaire insertion d'une nouvelle message -->
     
         <div class="formulaire text-center mx-auto">
-            <h2 class="text-center">Remplissez le formulaire</h2>
+            <h2 class="text-center" style="color: black">Formulaire de contact</h2>
             
             <form action="messages.php" method="post" class="px-4 py-3">
                 

@@ -44,11 +44,8 @@ $ligne_utilisateur = $sql-> fetch();
 
 
 <!-- Je met le contenu de la page -->
-<div class="jumbotron text-center mb-4">
-  <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
-  <p class="lead">Développeur intégrateur Web.</p>
-  <hr class="my-4">
-  <p>Bienvenue sur mon siteCV .</p>
+<div class="jumbotron text-center ">
+<h1 class="display-4">Développeur intégrateur <br> Web</h1>
 </div>
 
 <h1 class="display-4 text-center"><img src="img/developpement-web-aris-web.jpg" width='80%' alt=""></h1>

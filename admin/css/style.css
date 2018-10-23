@@ -2,6 +2,9 @@
 .navbar{
     background: black;
 }
+.nav-link{
+    color: #fff !important;
+}
 
 .container-fluid{
     padding: 5px;
@@ -40,6 +43,12 @@ h1{
 h2{
     font-family: 'PT Serif', serif;
 }
+
+th{
+    color: wheat;
+}
+
+
 
 .table{
     font-family: 'PT Serif', serif;

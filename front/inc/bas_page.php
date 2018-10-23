@@ -19,19 +19,14 @@
                     </p>
                 </div>
                 <div class="col-lg-4">
-                <h4 style="color: gold">Me contacter</h4>
-                    <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
-                    <p><strong>Email:</strong> santo.damien@hotmail.com</p>
+                <h4 style="color: gold">Message</h4>
+                    <a class="reseaux" href="messages.php" style="color:wheat"><i class="fas fa-envelope"></i></a>
                 </div>
             </div><!-- Fin .row -->
                 
-                <div class="col-lg-12">
-                    <p >Copyright &copy; Mon siteCV - 2018</p>
-                </div>
-          
-                
-            
-
+            <div class="col-lg-12">
+                <p >Copyright &copy; Mon siteCV - 2018</p>
+            </div>
       </footer>
   </div> <!-- Fin container-fluid -->
   <!-- lien bootstrap -->

@@ -89,27 +89,24 @@ $sql -> execute();
 $nbr_formations = $sql -> rowCount(); ?>
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
-        <p class="lead">Vous etes sur la page formations.</p>
-        <hr class="my-4">
-        <p>Découvrez mes formations.</p>
+        <h1 class="display-4">Vous êtes sur la page des formations</h1>
     </div>
 
     <!-- div pour le tableau -->
     <div class="text-center table-responsive table-hover mt-4 ">
 
-        <h1 class="mb-4">Mes formations</h1>
+        <h1 class="mb-4">Gestion des formations</h1>
 
         <table class="table table-bordered mb-4 mx-auto">
         <caption>La liste des formations : <?php echo $nbr_formations; ?></caption>
             <thead class="thead-dark">
                 <tr>
-                    <th>Titre Formations <a href="formations.php?column=titre_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=titre_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
-                    <th>Sous-titre <a href="formations.php?column=stitre_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=stitre_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
-                    <th>Dates <a href="formations.php?column=dates_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=dates_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
-                    <th>Descriptions <a href="formations.php?column=description_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=description_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
-                    <th>Modification</th>
-                    <th>Suppression</th>
+                    <th style="color: wheat">Titre Formations <a href="formations.php?column=titre_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=titre_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
+                    <th style="color: wheat">Sous-titre <a href="formations.php?column=stitre_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=stitre_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
+                    <th style="color: wheat">Dates <a href="formations.php?column=dates_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=dates_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
+                    <th style="color: wheat">Descriptions <a href="formations.php?column=description_form&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="formations.php?column=description_form&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
+                    <th style="color: wheat">Modification</th>
+                    <th style="color: wheat">Suppression</th>
                 </tr>
             </thead>
             <tbody>
@@ -136,7 +133,7 @@ $nbr_formations = $sql -> rowCount(); ?>
     <!-- Formulaire insertion d'une nouvelle formation -->
     
         <div class="formulaire text-center mx-auto">
-            <h2 class="text-center">Formulaire d'insertion d'une formation</h2>
+            <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>
             
             <form action="formations.php" method="post" class="px-4 py-3">
                 

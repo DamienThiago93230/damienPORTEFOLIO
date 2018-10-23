@@ -62,15 +62,12 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
 <?php require 'inc/navigation.php';?> 
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
-        <p class="lead">Vous etes sur la page loisirs.</p>
-        <hr class="my-4">
-        <p>Découvrez mes passions .</p>
+        <h1 class="display-4">Vous êtes sur la page des loisirs</h1>
     </div>
 
 
     <div class="text-center table-responsive table-hover mt-4">
-        <h1 class="text-center mb-4">Les loisirs et insertion d'un nouveau loisir</h1>
+        <h1 class="text-center mb-4">Gestion des loisirs</h1>
             <?php 
                 // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
                 $sql = $pdoCV -> prepare("SELECT * FROM t_loisirs WHERE id_utilisateur ='$id_utilisateur'");
@@ -83,9 +80,9 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
             <caption>La liste des loisirs : <?php echo $nbr_loisirs; ?></caption>
                 <thead class="thead-dark">
                     <tr>
-                        <th>Loisirs</th>
-                        <th>Modifier</th>
-                        <th>Supprimer</th>
+                        <th style="color: wheat">Loisirs</th>
+                        <th style="color: wheat">Modifier</th>
+                        <th style="color: wheat">Supprimer</th>
                     </tr>        
                 </thead>
                 <?php 
@@ -111,7 +108,8 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
             <hr>
             <!-- Insertion d'un nouveau loisir -->
             <div class="formulaire mx-auto">
-            <h2 class="text-center">Formulaire d'insertion d'un loisir</h2>
+            <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>
+            
                 <form action="loisirs.php" method="post">
                     <div class="form-group">
                         <label for="loisir">Loisir</label>

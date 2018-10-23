@@ -88,13 +88,10 @@ if(isset($_GET['order']) && isset($_GET['column'])){
 <?php require 'inc/navigation.php';?> 
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
-        <p class="lead">Vous etes sur la page compétences.</p>
-        <hr class="my-4">
-        <p>Découvrez mes compétences .</p>
+        <h1 class="display-2">Vous êtes sur la page des compétences </h1>
     </div>
 
-    <h1 class="text-center mb-4 mt-4">Mes compétences</h1>
+    <h1 class="text-center mb-4 mt-4">Gestion des compétences</h1>
     
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
@@ -108,12 +105,12 @@ if(isset($_GET['order']) && isset($_GET['column'])){
             <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
             <thead class="thead-dark">
                 <tr class="text-center">
-                    <th>Compétences trier de : <a href="competences.php?column=competence&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i>
+                    <th style="color: wheat">Compétences trier de : <a href="competences.php?column=competence&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i>
                     </a> | <a href="competences.php?column=competence&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a> </th> 
-                    <th>Niveaux trier de : <a href="competences.php?column=niveau&order=asc" class="href">0 à 100</a> | <a href="competences.php?column=niveau&order=desc" class="href"> 100 à 0</a></th> 
-                    <th>Catégories trier de : <a href="competences.php?column=categorie&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i></a> | <a href="competences.php?column=categorie&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a></th> 
-                    <th>Modifier </th> 
-                    <th>Supprimer </th> 
+                    <th style="color: wheat">Niveaux trier de : <a href="competences.php?column=niveau&order=asc" class="href">0 à 100</a> | <a href="competences.php?column=niveau&order=desc" class="href"> 100 à 0</a></th> 
+                    <th style="color: wheat">Catégories trier de : <a href="competences.php?column=categorie&order=asc" class="href"><i class="fas fa-sort-alpha-up"></i></a> | <a href="competences.php?column=categorie&order=desc" class="href"><i class="fas fa-sort-alpha-down"></i></a></th> 
+                    <th style="color: wheat">Modifier </th> 
+                    <th style="color: wheat">Supprimer </th> 
                 </tr>        
             </thead>
             <?php 
@@ -141,7 +138,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
         <hr>
         <!-- Insertion d'un nouveau compétence -->
         <div class="formulaire text-center mx-auto">
-        <h2 class="text-center">Formulaire d'insertion d'une compétence</h2>    
+        <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>    
             <form action="competences.php" method="post">
                 <div class="form-group">
                     <label for="competence">Compétence</label>

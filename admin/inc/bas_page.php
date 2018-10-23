@@ -11,25 +11,20 @@
 
 
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                 <h4 style="color: gold">Me contacter</h4>
                     <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
                     <p><strong>Email:</strong> santo.damien@hotmail.com</p>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                 <h4 style="color: gold">Réseaux</h4>
                     <p class="reseaux">
                         <a style="color: white" href="https://github.com/DamienThiago93230" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
                     </p>
                 </div>
-                <div class="col-lg-4">
-                <h4 style="color: gold">Me contacter</h4>
-                    <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
-                    <a><strong>Email:</strong> santo.damien@hotmail.com</p>
-                </div>
-            </div><!-- Fin .row -->
                 
+            </div><!-- Fin .row -->
               <div class="col-lg-12">
                   <p >Copyright &copy; Mon siteCV - 2018</p>
               </div>

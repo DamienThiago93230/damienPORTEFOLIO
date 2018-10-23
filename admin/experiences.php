@@ -66,13 +66,10 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
 <?php require 'inc/navigation.php';?> 
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Admin : <?php echo $ligne_utilisateur['pseudo']; ?></h1>
-        <p class="lead">Vous etes sur la page expériences.</p>
-        <hr class="my-4">
-        <p>Découvrez mes expériences .</p>
+        <h1 class="display-4">Vous êtes sur la page expérience</h1>
     </div>
 
-    <h1 class="text-center mb-4 mt-4">Mes experiences</h1>
+    <h1 class="text-center mb-4 mt-4">Gestion des expériences</h1>
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
             $sql = $pdoCV -> prepare("SELECT * FROM t_experiences WHERE id_utilisateur = '$id_utilisateur'");
@@ -85,12 +82,12 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
             <caption>La liste des experiences : <?php echo $nbr_experiences; ?></caption>
                 <thead class="thead-dark">
                     <tr>
-                        <th>Titre experience</th>
-                        <th>Sous titre</th>
-                        <th>Date de experience</th>
-                        <th>Description experience</th>
-                        <th>Modifier</th>
-                        <th>Supprimer</th>
+                        <th style="color: wheat">Titre experience</th>
+                        <th style="color: wheat">Sous titre</th>
+                        <th style="color: wheat">Date de experience</th>
+                        <th style="color: wheat">Description experience</th>
+                        <th style="color: wheat">Modifier</th>
+                        <th style="color: wheat">Supprimer</th>
                     </tr>        
                 </thead>
                 <?php 
@@ -120,7 +117,7 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
         <hr>
         <!-- Insertion d'un nouveau formation -->
         <div class="formulaire text-center mx-auto">
-        <h2 class="text-center mb-4">Formulaire d'insertion d'une expérience</h2>
+        <h2 class="text-center mb-4" style="color: black">Formulaire d'insertion</h2>
             <form action="experiences.php" method="post">
                 <div class="form-group">
                     <label for="titre_exp">Titre experience</label>

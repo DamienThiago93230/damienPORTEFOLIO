@@ -1,29 +1,29 @@
 <?php require 'connexion.php';?> 
 
 
-<nav class="navbar navbar-expand-sm navbar-dark text-white mb-0">
-    <!-- Brand -->
-    <a class="navbar-brand" href="index.php">Accueil </a>
-
-    <!-- Links -->
+<nav class="navbar navbar-expand-lg navbar-dark text-white mb-0 ">
+  <a class="navbar-brand" href="index.php">Accueil</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Profil <?php echo $ligne_utilisateur['prenom']; ?>
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="competences.php">Compétences</a>
-        <a class="dropdown-item" href="loisirs.php">Loisirs</a>
-        <a class="dropdown-item" href="formations.php">Formations</a>
-        <a class="dropdown-item" href="experiences.php">Experiences pro</a>
-        <a class="dropdown-item" href="realisations.php">Réalisations</a>
-        <a class="dropdown-item" href="messages.php">Message</a>
-      </div>
-    </li>
-
-    
-    <li class="nav-item">
+      <li class="nav-item lienPage">
+        <a class="nav-link" href="competences.php">Compétences <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item lienPage">
+        <a class="nav-link" href="experiences.php">Expériences Pro</a>
+      </li>
+      <li class="nav-item lienPage">
+        <a class="nav-link" href="formations.php">Formations</a>
+      </li>
+      <li class="nav-item lienPage">
+        <a class="nav-link " href="loisirs.php">Loisirs</a>
+      </li>
+      <li class="nav-item lienPage">
+        <a class="nav-link " href="realisations.php">Réalisations</a>
+      </li>
+      <li class="nav-item">
       <a class="nav-link" href="#">Inscription</a>
     </li>
     <li class="nav-item">
@@ -32,8 +32,6 @@
     <li class="nav-item">
       <a class="nav-link" href="../admin/index.php?quitter=oui" title="déconnecter vous ! ">Déconnexion <i style="color: red" class="fas fa-sign-out-alt"></i></a>
     </li>
-  
-    <!-- Dropdown -->
-    
-  </ul>
-</nav> 
+    </ul>
+  </div>
+</nav><!-- Fin nav -->
