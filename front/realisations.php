@@ -23,10 +23,6 @@ if(isset($_GET['order']) && isset($_GET['column'])){
 require_once 'inc/haut_page.php';
 require_once 'inc/navigation.php';
 
-
-
-
-
 // requête pour compter et cherhcer plusieurs enregistrements
 $sql = $pdoCV -> prepare("SELECT * FROM t_realisations WHERE id_utilisateur = '1' $order");
 $sql -> execute();
@@ -35,6 +31,8 @@ $nbr_realisations = $sql -> rowCount(); ?>
         <main>
     <div class="jumbotron text-center mb-4">
         <h1 class="display-4">Vous êtes sur la page des réalisations</h1>
+        <hr class="my-4">
+        <p>Découvrez les....</p>
     </div>
 
         <!-- div pour le tableau -->

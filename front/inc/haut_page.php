@@ -11,7 +11,8 @@
     <!-- Lien fontawasome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <!-- Lien Googlefont -->
-    <link href="https://fonts.googleapis.com/css?family=Cinzel|Diplomata" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css?family=Cinzel|Diplomata" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great" rel="stylesheet">  
     <!-- CK Editor 4. -->
     <script src="ckeditor/ckeditor.js"></script>
     <!-- Lien pour la page authentification -->

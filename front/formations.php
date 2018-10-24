@@ -40,25 +40,20 @@ $nbr_formations = $sql -> rowCount(); ?>
         <p>Découvrez les....</p>
     </div>
 
-    <!-- div pour le tableau -->
-    <div class="text-center table-responsive table-hover mt-4 mx-auto ">
+    
+    <div class="text-center mt-4">
 
         <h1 class="mb-4">Mes formations</h1>
 
-        <table class="table table-bordered mb-4 mx-auto">
-        
-            
-            <tbody>
-                
+        <div class="row mx-auto">
                 <?php while($ligne_formation = $sql -> fetch())
                    {
                 ?>
-                    
-                    <div class="card bg-light mb-5 col-lg-4 mx-5" style="max-width: 50rem; color:wheat">
-                        <div class="card-header" ><?php echo $ligne_formation['titre_form'];?>//<?php echo $ligne_formation['dates_form'];?><br><?php echo $ligne_formation['stitre_form'];?></div>
-                        <p ></p>
-                        <div  style="color:black">
-                            <h5 ><?php echo $ligne_formation['description_form'];?></h5>
+                    <div class="card mb-5 mt-4 mx-2 cardForm mx-auto " style="max-width: 40rem; color: wheat">
+                        <div class="card-header"><?php echo $ligne_formation['titre_form'];?>//<?php echo $ligne_formation['dates_form'];?><br><?php echo $ligne_formation['stitre_form'];?></div>
+                        <div class="card-body" style="color:black">
+                            <h5 class="card-title">Light card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
                    
@@ -66,10 +61,10 @@ $nbr_formations = $sql -> rowCount(); ?>
                 <?php 
                    } // Fin de la boucle while
                 ?>
-            </tbody>
-        </table>
+          
+        </div>
         
-    </div> <!-- Fin div tableau -->
+    </div> <!-- Fin .row -->
 
     
 

@@ -5,7 +5,7 @@
   
       <hr>
       <footer class="text-center p-2">
-            <div class="row">
+            <div class="row mx-auto">
                 <div class="col-lg-4">
                 <h4 style="color: gold">Me contacter</h4>
                     <p><strong>Téléphone :</strong> 06-18-12-25-64</p>

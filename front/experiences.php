@@ -42,7 +42,6 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
 
     <div class="jumbotron text-center mb-4">
         <h1 class="display-4">Vous êtes sur la page expériences</h1>
-        <p class="lead">.</p>
         <hr class="my-4">
         <p>Découvrez les....</p>
     </div>
@@ -55,7 +54,7 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
             $nbr_experiences = $sql -> rowCount();
         ?>
     
-        <div class="text-center table-responsive table-hover mt-4 ">
+    <div class="text-center table-responsive table-hover mt-4">
             <table class="table table-bordered mb-4 mx-auto">
             <caption>La liste des experiences : <?php echo $nbr_experiences; ?></caption>
                 <thead class="thead-dark">
@@ -64,7 +63,6 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
                         <th style="color: wheat">Sous titre</th>
                         <th style="color: wheat">Date de experience</th>
                         <th style="color: wheat">Description experience</th>
-                        
                     </tr>        
                 </thead>
                 <?php 
@@ -77,8 +75,6 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
                         <td><?php echo $ligne_experience['stitre_exp']; ?></td>
                         <td><?php echo $ligne_experience['dates_exp']; ?></td>
                         <td><?php echo $ligne_experience['description_exp']; ?></td>
-                       
-                        </td>
                     </tr>
                 <?php 
                     } 

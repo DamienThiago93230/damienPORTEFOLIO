@@ -28,7 +28,7 @@ $ligne_utilisateur = $sql-> fetch();
             ?>
         
             
-            <div class="row taille">
+            <div class="row taille mx-auto">
                 <div class="col-lg-4">
                     <table class="table table-bordered l">
                     <caption>La liste des loisirs : <?php echo $nbr_loisirs; ?></caption>
@@ -51,7 +51,7 @@ $ligne_utilisateur = $sql-> fetch();
                         </tbody>
                     </table>
                 </div><!-- fin col-lg-4 -->
-                <div class="col-lg-8">
+                <div class="col-lg-8 col-sm-12">
                     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">

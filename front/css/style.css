@@ -41,11 +41,11 @@ p{
 }
 
 h1{
-    font-family: 'Diplomata', cursive;
+    font-family: 'Fredericka the Great', cursive;
 }
 
 h2{
-    
+    color: orange;
     font-family: 'Cinzel', serif;
 }
 
@@ -78,10 +78,13 @@ main{
 
 .row {
     margin-right: 50px;
-    margin-left: 50px;
+    margin-left: 150px;
 }
 
 /* page formation */
+.card-header:first-child {
+    border-radius: calc(5.25rem - 1px) calc(5.25rem - 1px) 0 0;
+}
 .card-header{
     background-image: url(../img/jumbotron4.png);
     font-family: 'Cinzel', serif;
@@ -90,6 +93,13 @@ main{
 .ml-5, .mx-5 {
     margin-left: 8rem !important;
 }
+
+.cardForm{
+    background: content-box radial-gradient( wheat, lightgrey);
+    border-radius: 50px 50px 50px 50px;
+}
+
+
 
 
 
