@@ -50,6 +50,26 @@ $ligne_utilisateur = $sql-> fetch();
   <p>Bienvenue sur mon siteCV .</p>
 </div>
 
+<div class=" mt-4 bg-primary" >
+
+    <div class="row ">
+            <div class="col-lg-3 text-center" >
+                <h1><i>Qui suis-je ?</i></h1>
+                <img src="img/moi.jpg" class="rounded mx-auto d-block" alt="...">
+                <h3><?php echo $ligne_utilisateur['nom'];?> <?php echo $ligne_utilisateur['prenom'];?></h3>
+                <p>6 mois d'experiences</p>
+                <p></p>
+            </div>
+            <div class="col-lg-9 ">
+            <h1 class="text-center mb-5 m-4"><i>Présentation</i></h1>
+            <div class="presentation"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime reprehenderit asperiores culpa, laborum, ullam nisi deserunt cumque labore voluptates quod at impedit id quisquam nobis consequatur itaque. Dolor, rem nostrum!</p></div>
+            </div>
+    </div><!-- Fin .row -->
+
+</div> 
+
+
+
 <h1 class="display-4 text-center">
     <img src="img/developpement-web-aris-web.jpg" width='80%' alt="developpement-web-aris-web">
 </h1>

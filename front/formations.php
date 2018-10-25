@@ -62,9 +62,9 @@ $nbr_formations = $sql -> rowCount(); ?>
                    } // Fin de la boucle while
                 ?>
           
-        </div>
+        </div><!-- Fin .row -->
         
-    </div> <!-- Fin .row -->
+    </div> 
 
     
 

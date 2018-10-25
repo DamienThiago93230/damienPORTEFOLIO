@@ -7,6 +7,17 @@
 .nav-link{
     color: #fff !important;
 }
+/* Page index 'qui suis-je? */
+.rounded {
+    border-radius: 10.25rem !important;
+    width: 200px;
+    height: 200px;
+}
+
+.presentation{
+    width: 90%;
+    margin-left: 10%;   
+}
 
 .container-fluid{
     padding: 5px;
@@ -15,6 +26,7 @@
 .jumbotron{
     background-image: url(../img/jumbotron4.png);
     color: wheat;
+    height: 270px;
 }
 
 .formulaire{
@@ -69,8 +81,6 @@ main{
     background-image: url(../img/jumbotron4.png);
 }
 
-
-
 /* page loisir */
 .l{
     width: 100%;/* Pour la taille du tableau loisir */
@@ -98,6 +108,14 @@ main{
     background: content-box radial-gradient( wheat, lightgrey);
     border-radius: 50px 50px 50px 50px;
 }
+
+/* Page compentences.php */
+.icon{
+    font-size: 50px;
+    letter-spacing: 20px;
+}
+
+
 
 
 

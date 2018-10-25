@@ -37,7 +37,11 @@ if(isset($_GET['order']) && isset($_GET['column'])){
     <div class="jumbotron text-center mb-4">
         <h1 class="display-4">Vous êtes sur la page compétences</h1>
         <hr class="my-4">
-        <p>Découvrez les compétences que j'ai acquis au court de ma formation .</p>
+        <p >Découvrez les compétences que j'ai acquis au court de ma formation .</p>
+        <p class="icon">
+            <i class="fab fa-php"></i><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js-square"></i><i class="fab fa-wordpress-simple"></i>
+
+        </p>
     </div>
 
     <h1 class="text-center mb-5 mt-5">Mes compétences</h1>

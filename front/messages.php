@@ -18,21 +18,6 @@ if(isset($_POST['nom'])){// si on a reçu un nouveau
     } // fin if !=""
 
 }// fin $_POST reception
-// ----------------------------------
-
-
-// Suppression d'une message dans la BDD
-if(isset($_GET['id_message'])){// on récupère ce que je supprime dans l'url par son id
-
-    $efface = $_GET['id_message'];  // je passe l'id dans une variable $efface
-
-    $sql = "DELETE FROM t_messages WHERE id_message = '$efface' "; // delete de la base 
-    $pdoCV -> query($sql); // on peut faire aussi avec exec
-
-    header("location: ../admin/messages.php");
-    
-}
-
 
 require_once 'inc/haut_page.php';
 
@@ -48,7 +33,6 @@ require_once 'inc/haut_page.php';
     
     
     <!-- Formulaire insertion d'une nouvelle message -->
-    
         <div class="formulaire text-center mx-auto">
             <h2 class="text-center" style="color: black">Formulaire de contact</h2>
             
@@ -69,7 +53,6 @@ require_once 'inc/haut_page.php';
                     <input type="text" class="form-control" name="sujet" placeholder="Sujet" required>
                 </div>        
                 
-    
                 <div class="form-group">
                     <label for="message" class="d-block">Message </label>
                     <textarea type="text" name="message" id="message" class="form-control"></textarea>
