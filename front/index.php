@@ -69,9 +69,12 @@ $ligne_utilisateur = $sql-> fetch();
                             <p>Je suis actuellement en formation intensive de 10 mois au PoleS de Pantin où j'apprends à maîtriser tous les langages de programmation dans le but de devenir un développeur WEB.</p>
                         </div>
                         <div class="col-lg-4">
+                        <div class="text-center form"><i class="fas fa-heart"></i></div>
                             <p>Je suis actuellement en formation intensive de 10 mois au PoleS de Pantin où j'apprends à maîtriser les langages de programmation dans le but de devenir un développeur WEB.</p>
                         </div>
                         <div class="col-lg-4">
+                        <div class="text-center form"><i class="fas fa-check-square"></i>
+</div>
                             <p>Je suis actuellement en formation intensive de 10 mois au PoleS de Pantin où j'apprends à maîtriser les langages de programmation dans le but de devenir un développeur WEB.</p>
                         </div>
                     </div>
