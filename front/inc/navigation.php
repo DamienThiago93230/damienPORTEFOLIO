@@ -26,7 +26,7 @@
         <a class="nav-link " href="realisations.php">Réalisations  <i class="fas fa-laptop-code"></i></a>
       </li>
       <li class="nav-item lienPage">
-        <a class="nav-link " href="messages.php">Message</a>
+        <a class="nav-link " href="messages.php">Message <i class="far fa-envelope"></i></a>
       </li>
     </ul>
   </div>
