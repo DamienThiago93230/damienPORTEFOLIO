@@ -101,10 +101,10 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
                         <td><?php echo $ligne_experience['dates_exp']; ?></td>
                         <td><?php echo $ligne_experience['description_exp']; ?></td>
                         <td>
-                            <a class="href" href="modif_experience.php?id_experience=<?php echo $ligne_experience['id_experience']; ?> "><i class="fas fa-edit"></i></a> 
+                            <a class="href" href="modif_experience.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>" onclick="return(confirm('Etes-vous certain de vouloir modifier cette experience ?'))"><i class="fas fa-edit"></i></a> 
                         </td>
                         <td class="td">
-                            <a class="href" href="experiences.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>"><i class="fas fa-trash-alt text-danger"></i></a> 
+                            <a class="href" href="experiences.php?id_experience=<?php echo $ligne_experience['id_experience']; ?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer cette experience ?'))"><i class="fas fa-trash-alt text-danger"></i></a> 
                         </td>
                     </tr>
                 <?php 

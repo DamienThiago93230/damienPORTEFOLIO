@@ -93,10 +93,10 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
                     <tr>
                         <td class="td"><?php echo $ligne_loisir['loisir']; ?></td>
                         <td>
-                            <a class="href" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?> "><i class="fas fa-edit"></i></a> 
+                            <a class="href" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>" onclick="return(confirm('Etes-vous certain de vouloir modifier ce loisir ?'))"><i class="fas fa-edit"></i></a> 
                         </td>
                         <td class="td">
-                            <a class="href" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>"><i class="fas fa-trash-alt text-danger"></i></a> 
+                            <a class="href" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer ce loisir ?'))"><i class="fas fa-trash-alt text-danger"></i></a> 
                         </td>
                     </tr>
                 <?php 

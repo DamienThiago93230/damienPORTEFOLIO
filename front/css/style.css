@@ -101,7 +101,7 @@ main{
 
 .row {
     margin-right: 135px;
-margin-left: 125px;
+    margin-left: 125px;
 }
 
 /* page formation */
@@ -127,6 +127,86 @@ margin-left: 125px;
     font-size: 50px;
     letter-spacing: 20px;
 }
+
+*, :before, :after { box-sizing: border-box; }
+
+body {
+  color: black;
+  font: 16px/1.25 'Raleway', sans-serif;
+  margin: 0;
+  
+}
+
+.rowcomp {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80em;
+  padding: 1em;
+}
+
+section { text-align: center; }
+
+
+.arrow {
+  border: 2em solid transparent;
+  height: 0;
+  margin: 50vh auto;
+  width: 0;
+}
+
+.arrow.down {
+  border-bottom: none;
+  border-top-color: #e5e5e5;
+}
+.arrow.up {
+    border-bottom-color: #e5e5e5;
+    border-top: none;
+}
+/*** RADIAL PROGRESS ***/
+/* Circumference = 2πr */
+/* π = 3.1415926535898 */
+/* r = 35 */
+
+svg.radial-progress {
+  height: auto;
+  max-width: 200px;
+  padding: 1em;
+  transform: rotate(-90deg);
+  width: 100%;
+}
+
+svg.radial-progress circle {
+  fill: rgba(0,0,0,0);
+  stroke: #fff;
+  stroke-dashoffset: 219.91148575129; /* Circumference */
+  stroke-width: 10;
+}
+
+svg.radial-progress circle.incomplete { opacity: 0.25; }
+
+svg.radial-progress circle.complete { stroke-dasharray: 219.91148575129; /* Circumference */ }
+
+svg.radial-progress text {
+  fill: black;
+  font-family: 'Cinzel', serif;
+  text-anchor: middle;
+  text-shadow: #c64100 1px 1px;
+}
+
+svg.radial-progress circle {
+    fill: wheat;
+    stroke: #fff;
+    stroke-dashoffset: 219.91148575129;
+    stroke-width: 10;
+    height: 5%;
+
+}
+
+/*** COLORS ***/
+/* Primary */
+
+svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
+
 
 
 

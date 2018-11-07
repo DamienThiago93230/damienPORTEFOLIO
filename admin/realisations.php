@@ -117,8 +117,8 @@ $nbr_realisations = $sql -> rowCount(); ?>
                     <td><?= $ligne_realisation['stitre_real']; ?></td>
                     <td><?= $ligne_realisation['dates_real']; ?></td>
                     <td><?= $ligne_realisation['description_real']; ?></td>
-                    <td> <a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><i class="fas fa-edit"></i></a></td>
-                    <td> <a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><i class="fas fa-trash-alt text-danger"></i></a></td>
+                    <td> <a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>" onclick="return(confirm('Etes-vous certain de vouloir modifier cette réalisation ?'))"><i class="fas fa-edit"></i></a></td>
+                    <td> <a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer cette réalisiation ?'))"><i class="fas fa-trash-alt text-danger"></i></a></td>
                 </tr>
                 
             <?php 

@@ -41,7 +41,7 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
 <?php require 'inc/navigation.php';?> 
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Vous êtes sur la page expériences</h1>
+        <h1 class="display-4">Vous êtes sur la page <br> expériences</h1>
         <hr class="my-4">
         <p>Découvrez les....</p>
     </div>

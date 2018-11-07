@@ -12,7 +12,7 @@ $ligne_utilisateur = $sql-> fetch();
 <?php require 'inc/navigation.php';?> 
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Vous etes sur la page loisirs</h1>
+        <h1 class="display-4">Vous êtes sur la page <br> loisirs</h1>
         <hr class="my-4">
         <p>Découvrez les....</p>
     </div>

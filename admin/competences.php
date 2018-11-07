@@ -123,10 +123,10 @@ if(isset($_GET['order']) && isset($_GET['column'])){
                     <td class="td"><?php echo $ligne_competence['niveau']; ?>/100</td>
                     <td class="td"><?php echo $ligne_competence['categorie']; ?></td>
                     <td class="td">
-                        <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-edit"></i></a> 
+                        <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" onclick="return(confirm('Etes-vous certain de vouloir modifier cette compétence ?'))"><i class="fas fa-edit"></i></a> 
                     </td>
                     <td class="td">
-                        <a href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>"><i class="fas fa-trash-alt text-danger"></i></a> 
+                        <a href="competences.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer cette compétence ?'))"><i class="fas fa-trash-alt text-danger"></i></a> 
                     </td>
                 </tr>
             <?php 

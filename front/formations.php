@@ -34,7 +34,7 @@ $sql -> execute();
 $nbr_formations = $sql -> rowCount(); ?>
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Vous êtes sur la page formations</h1>
+        <h1 class="display-4">Vous êtes sur la page <br> formations</h1>
         
         <hr class="my-4">
         <p>Découvrez les....</p>
@@ -42,9 +42,7 @@ $nbr_formations = $sql -> rowCount(); ?>
 
     
     <div class="text-center mt-4">
-
         <h1 class="mb-4">Mes formations</h1>
-
         <div class="row mx-auto">
                 <?php while($ligne_formation = $sql -> fetch())
                    {
@@ -56,19 +54,11 @@ $nbr_formations = $sql -> rowCount(); ?>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         </div>
                     </div>
-                   
-                    
                 <?php 
                    } // Fin de la boucle while
                 ?>
-          
         </div><!-- Fin .row -->
-        
     </div> 
 
-    
-
-    
-    
 <!-- Je inc le footer avec les lien -->
 <?php require 'inc/bas_page.php';?>

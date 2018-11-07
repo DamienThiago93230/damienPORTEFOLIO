@@ -5,8 +5,6 @@ $sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs where id_utilisateur = '1'
 $ligne_utilisateur = $sql-> fetch();
 
 
-
-
 // codes pour filtrer les données du tableau (croissant / décroissant)
 
 $order = '';
@@ -30,7 +28,7 @@ $nbr_realisations = $sql -> rowCount(); ?>
 
         <main>
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Vous êtes sur la page des réalisations</h1>
+        <h1 class="display-4">Vous êtes sur la page <br> des réalisations</h1>
         <hr class="my-4">
         <p>Découvrez les....</p>
     </div>
@@ -48,8 +46,6 @@ $nbr_realisations = $sql -> rowCount(); ?>
                         <th style="color: wheat">Sous-titre <a href="realisations.php?column=stitre_real&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="realisations.php?column=stitre_real&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
                         <th style="color: wheat">Dates <a href="realisations.php?column=dates_real&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="realisations.php?column=dates_real&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
                         <th style="color: wheat">Descriptions <a href="realisations.php?column=description_real&order=asc"><i class="fas fa-arrow-up"></i></a> | <a href="realisations.php?column=description_real&order=desc"><i class="fas fa-arrow-down"></i></a> </th>
-                        <th style="color: wheat">Modification</th>
-                        <th style="color: wheat">Suppression</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,8 +56,6 @@ $nbr_realisations = $sql -> rowCount(); ?>
                         <td><?= $ligne_realisation['stitre_real']; ?></td>
                         <td><?= $ligne_realisation['dates_real']; ?></td>
                         <td><?= $ligne_realisation['description_real']; ?></td>
-                        <td> <a href="modif_realisation.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><i class="fas fa-edit"></i></a></td>
-                        <td> <a href="realisations.php?id_realisation=<?= $ligne_realisation['id_realisation'];?>"><i class="fas fa-trash-alt text-danger"></i></a></td>
                     </tr>
                     
                 <?php 

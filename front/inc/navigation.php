@@ -1,4 +1,4 @@
-<?php require 'connexion.php';?> 
+<!-- <?php require 'connexion.php';?>  -->
 
 
 
@@ -10,7 +10,8 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item lienPage">
-        <a class="nav-link" href="competences.php">Compétences
+        <a class="nav-link" href="competences.php">Compétences <i class="fas fa-code"></i>
+
  <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item lienPage">

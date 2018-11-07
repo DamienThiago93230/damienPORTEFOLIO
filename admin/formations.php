@@ -117,8 +117,8 @@ $nbr_formations = $sql -> rowCount(); ?>
                     <td><?= $ligne_formation['stitre_form']; ?></td>
                     <td><?= $ligne_formation['dates_form']; ?></td>
                     <td><?= $ligne_formation['description_form']; ?></td>
-                    <td> <a href="modif_formation.php?id_formation=<?= $ligne_formation['id_formation'];?>"><i class="fas fa-edit"></i></a></td>
-                    <td> <a href="formations.php?id_formation=<?= $ligne_formation['id_formation'];?>"><i class="fas fa-trash-alt text-danger"></i></a></td>
+                    <td> <a href="modif_formation.php?id_formation=<?= $ligne_formation['id_formation'];?>" onclick="return(confirm('Etes-vous certain de vouloir modifier cette formation ?'))"><i class="fas fa-edit"></i></a></td>
+                    <td> <a href="formations.php?id_formation=<?= $ligne_formation['id_formation'];?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer cette formation ?'))"><i class="fas fa-trash-alt text-danger"></i></a></td>
                 </tr>
                 
             <?php 
