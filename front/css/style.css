@@ -12,8 +12,8 @@
     border-radius: 10.25rem !important;
     width: 200px;
     height: 200px;
-    margin-top: 18%;
-    border: 5px dashed #c64100;
+    margin-top: 14%;
+    box-shadow: black 17px 9px 41px 10px;
 }
 
 .h1index{
@@ -27,9 +27,14 @@
     width: 100%;
     margin-left:-6%; 
     font-size: 20px;  
+    margin-top: 6px
 }
 .form{
     font-size: 250%;
+    box-shadow: black 2px 17px 10px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    border-radius: 0px 0px 20px 20px;
 }
 
 .container-fluid{
@@ -62,7 +67,9 @@ footer{
     font-size: 40px;
 }
 p{
-    font-family: 'Cinzel', serif;
+    font-family: 'Fredericka the Great', cursive;
+    text-shadow: black 5px;
+    text-shadow: black 0px 0px;
 }
 
 h1{
@@ -106,7 +113,7 @@ main{
 
 /* page formation */
 .card-header:first-child {
-    border-radius: calc(5.25rem - 1px) calc(5.25rem - 1px) 0 0;
+    border-radius: calc(5.25rem - 33px) calc(5.25rem - 33px) 0 0;
 }
 .card-header{
     background-image: url(../img/jumbotron4.png);
@@ -119,7 +126,8 @@ main{
 
 .cardForm{
     background: content-box radial-gradient( wheat, lightgrey);
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 20px;
+    width: 50%;
 }
 
 /* Page compentences.php */

@@ -47,11 +47,12 @@ $nbr_formations = $sql -> rowCount(); ?>
                 <?php while($ligne_formation = $sql -> fetch())
                    {
                 ?>
-                    <div class="card mb-5 mt-4 mx-2 cardForm mx-auto " style="max-width: 40rem; color: wheat">
-                        <div class="card-header"><?php echo $ligne_formation['titre_form'];?>//<?php echo $ligne_formation['dates_form'];?><br><?php echo $ligne_formation['stitre_form'];?></div>
-                        <div class="card-body" style="color:black">
-                            <h5 class="card-title">Light card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div class="col-lg-4">
+                        <div class="card mb-5 mt-4 mx-2 cardForm mx-auto" style="max-width: 40rem; color: wheat">
+                            <div class="card-header"><h1><?php echo $ligne_formation['stitre_form'];?> </h1><?php echo $ligne_formation['titre_form'];?>//<?php echo $ligne_formation['dates_form'];?><br></div>
+                            <div class="card-body" style="color:black">
+                                <p class="card-text"><?php echo $ligne_formation['description_form'];?></p>
+                            </div>
                         </div>
                     </div>
                 <?php 

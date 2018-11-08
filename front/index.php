@@ -22,7 +22,7 @@ $ligne_utilisateur = $sql-> fetch();
 <div class="jumbotron text-center mb-4">
   <h1 class="display-4">Développeur intégrateur <br> Web</h1>
   <hr class="my-4">
-  <p>Bienvenue sur mon siteCV .</p>
+  <p style="color: black">Bienvenue sur mon siteCV .</p>
 </div>
 
 <div class=" mt-2" >
@@ -30,27 +30,25 @@ $ligne_utilisateur = $sql-> fetch();
             <div class="col-lg-3 text-center" >
                 <h1 class="h1index"><i>Qui suis-je ?</i></h1>
                 <img src="img/moi.jpg" class="rounded mx-auto d-block" alt="...">
-                <h3><?php echo $ligne_utilisateur['nom'];?> <?php echo $ligne_utilisateur['prenom'];?></h3>
+                <h1><?php echo $ligne_utilisateur['nom'];?> <?php echo $ligne_utilisateur['prenom'];?></h1>
                 <h4><?php echo date('Y') - 1987?> ans</h4>
-                <p>6 mois d'experiences</p>
-                <p></p>
+                <p>Localisation : Paris-Romainville</p>
             </div>
             <div class="col-lg-9 ">
                 <div class="row col-lg-12">
                     <div class="presentation">
                             <h1 class="text-center mb-5 m-4 h1index"><i>Présentation</i></h1>
                         <div class="col-lg-4">
-                        <div class="text-center form"><i class="fas fa-graduation-cap text-center"></i></div>
-                            <p>Je suis actuellement en formation intensive de 10 mois au PoleS de Pantin où j'apprends à maîtriser tous les langages de programmation dans le but de devenir un développeur WEB.</p>
+                        <div class="text-center form"><i class="fas fa-graduation-cap text-center" style="color: orange"></i></div>
+                            <p>Je suis actuellement en <i style="color: orange">formation intensive</i> de 10 mois au PoleS de Pantin où j'apprends à maîtriser tous les langages de programmation dans le but de devenir un <i style="color: orange">développeur integrateur WEB</i> .</p>
                         </div>
                         <div class="col-lg-4">
                         <div class="text-center form"><i class="fas fa-heart" style="color: red"></i></div>
-                            <p>Je suis actuellement en formation intensive de 10 mois au PoleS de Pantin où j'apprends à maîtriser les langages de programmation dans le but de devenir un développeur WEB.</p>
+                            <p><i style="color: red">Passionné</i> par l'informatique, en quête de nouvelles <i style="color: red">connaissances</i>, je suis <i style="color: red">polyvalent</i>,<i style="color: red"> motivé</i> et <i style="color: red">détérminé</i> dans mes projets, je pratique le football donc le <i style="color: red">travail d'équipe</i> est un de mes atout majeur .</p>
                         </div>
                         <div class="col-lg-4">
-                        <div class="text-center form"><i class="fas fa-check-square"></i>
-</div>
-                            <p>Je suis actuellement en formation intensive de 10 mois au PoleS de Pantin où j'apprends à maîtriser les langages de programmation dans le but de devenir un développeur WEB.</p>
+                        <div class="text-center form"><i class="fas fa-check-square" style="color: blue"></i></div>
+                            <p><i style="color: blue">Autodidacte</i> je pratique le <i style="color: blue">développement web</i> lors de mes temps libres, je développe mes <i style="color: blue">compétences</i> grâces aux outils tels que: <i style="color: blue">PHP</i>, <i style="color: blue">MySQL</i>, <i style="color: blue">JavaScript</i>, <i style="color: blue">Ajax</i>, <i style="color: blue">HTML</i> ou encore le <i style="color: blue">CSS</i> .</p>
                         </div>
                     </div>
                 </div>
