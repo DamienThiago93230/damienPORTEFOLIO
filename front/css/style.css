@@ -44,7 +44,8 @@
 .jumbotron{
     background-image: url(../img/jumbotron4.png);
     color: wheat;
-    height: 270px;
+    height: 288px;
+    padding-top: 1px;
 }
 
 .formulaire{
@@ -218,6 +219,30 @@ svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
 
 
 
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
+
+
+svg:not(:root) {
+    overflow: hidden;
+    width: 100%;
+}
+
+text {
+  fill: #35322a;
+  filter: url('#money');
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 100px;
+  font-weight: 900;
+}
+
+html {
+  align-items: center;
+  background: #ebe7e0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 600px;
+}
 
 
 
