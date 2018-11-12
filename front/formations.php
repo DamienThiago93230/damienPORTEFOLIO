@@ -47,7 +47,7 @@ $nbr_formations = $sql -> rowCount(); ?>
                 <?php while($ligne_formation = $sql -> fetch())
                    {
                 ?>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="card mb-5 mt-4 mx-2 cardForm mx-auto" style="max-width: 40rem; color: wheat">
                             <div class="card-header"><h1><?php echo $ligne_formation['stitre_form'];?> </h1><?php echo $ligne_formation['titre_form'];?>//<?php echo $ligne_formation['dates_form'];?><br></div>
                             <div class="card-body" style="color:black">

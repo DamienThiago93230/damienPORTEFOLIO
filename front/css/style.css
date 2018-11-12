@@ -8,6 +8,33 @@
     color: #fff !important;
 }
 /* Page index 'qui suis-je? */
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
+
+
+svg:not(:root) {
+    overflow: hidden;
+    width: 100%;
+}
+
+.titre {
+  fill: #35322a;
+  filter: url('#money');
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 100px;
+  font-weight: 900;
+  height: 20%;
+   
+}
+.titre1 {
+    fill: #35322a;
+    filter: url('#money');
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 70px;
+    font-weight: 900;
+    height: 20%;
+}
+
 .rounded {
     border-radius: 10.25rem !important;
     width: 200px;
@@ -19,15 +46,18 @@
 .h1index{
     color: wheat;
     background-image: url(../img/jumbotron4.png);
-    height: 45px;
+    height: 20%;
     border-radius: 20px 20px 20px 20px;
+    fill: #35322a;
+    filter: url('#money');
+    font-family: 'Playfair Display', 'Georgia', serif;
 }
 
 .presentation{
     width: 100%;
-    margin-left:-6%; 
-    font-size: 20px;  
-    margin-top: 6px
+    margin-left:6%; 
+    font-size: 22px;  
+    margin-top: 0px
 }
 .form{
     font-size: 250%;
@@ -128,7 +158,7 @@ main{
 .cardForm{
     background: content-box radial-gradient( wheat, lightgrey);
     border-radius: 20px;
-    width: 50%;
+    width: 100%;
 }
 
 /* Page compentences.php */
@@ -219,30 +249,9 @@ svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
 
 
 
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
 
 
-svg:not(:root) {
-    overflow: hidden;
-    width: 100%;
-}
 
-text {
-  fill: #35322a;
-  filter: url('#money');
-  font-family: 'Playfair Display', 'Georgia', serif;
-  font-size: 100px;
-  font-weight: 900;
-}
-
-html {
-  align-items: center;
-  background: #ebe7e0;
-  display: flex;
-  justify-content: center;
-  min-height: 100vh;
-  min-width: 600px;
-}
 
 
 
