@@ -8,8 +8,8 @@
             <div class="row mx-auto">
                 <div class="col-lg-4">
                 <h4 style="color: gold">Me contacter</h4>
-                    <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
-                    <p><strong>Email:</strong> santo.damien@hotmail.com</p>
+                    <p><strong style="color: #f47f33">Téléphone :</strong> 06-18-12-25-64</p>
+                    <p><strong style="color: #f47f33">Email:</strong> santo.damien@hotmail.com</p>
                 </div>
                 <div class="col-lg-4">
                 <h4 style="color: gold">Réseaux</h4>
@@ -25,7 +25,7 @@
             </div><!-- Fin .row -->
                 
             <div class="col-lg-12">
-                <p >Copyright &copy; Mon siteCV - 2018</p>
+                <p style="color: #f47f33">Copyright &copy; Mon siteCV - 2018</p>
             </div>
       </footer>
   </div> <!-- Fin container-fluid -->

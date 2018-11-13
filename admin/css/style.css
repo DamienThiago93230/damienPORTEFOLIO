@@ -1,6 +1,7 @@
 
 .navbar{
     background: black;
+    font-family: 'PT Serif', serif;
 }
 .nav-link{
     color: #fff !important;

@@ -21,7 +21,7 @@ $ligne_utilisateur = $sql-> fetch();
 <!-- Je met le contenu de la page -->
 <div class="jumbotron text-center mb-4 col-lg-12">
  
-<svg width='1200' height='200'>
+<svg height='200'>
   <filter id='money'>
     <feMorphology in='SourceGraphic' operator='dilate' radius='2' result='expand'/>
 

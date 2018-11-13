@@ -2,7 +2,7 @@
 
 
 <nav class="navbar navbar-expand-lg navbar-dark text-white mb-0 ">
-  <a class="navbar-brand" href="index.php">Accueil</a>
+  <a class="navbar-brand" href="index.php"><img src="img/logo3.png" alt="logo"></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
