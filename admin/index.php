@@ -29,32 +29,21 @@ if (isset($_GET['quitter'])) { // On récupère le terme quitter en GET
 $sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '$id_utilisateur'"); 
 $ligne_utilisateur = $sql-> fetch();
 
-
-
 ?>
-
 
 <!-- Je inc tous le haut de page le Doctype, les meta et les liens -->
 <?php require 'inc/haut_page.php'; ?>
 
-
-
 <!-- Je inc la bar de navigation -->
 <?php require 'inc/navigation.php'; ?>
-
 
 <!-- Je met le contenu de la page -->
 <div class="jumbotron text-center ">
 <h1 class="display-4">Développeur intégrateur <br> Web</h1>
 </div>
 
-<h1 class="display-4 text-center"><img src="img/developpement-web-aris-web.jpg" width='80%' alt=""></h1>
+<h1 class="display-4 text-center"><img src="img/developpement-web-aris-web.jpg" width='80%' alt="developpement"></h1>
   
-
-
-
-
-
 
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php'; ?>

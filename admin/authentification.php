@@ -1,6 +1,7 @@
 <?php require 'connexion.php';
 
 session_start(); // à mettre dans toutes les pages de l'admin 
+define('RACINE_SITE', '/');
 
 // Traitement pour la connexion a l'admin
 if (isset($_POST['connexion'])) { // Connexion est le name du button
