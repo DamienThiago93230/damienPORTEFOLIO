@@ -132,43 +132,38 @@ $nbr_formations = $sql -> rowCount(); ?>
     
     <!-- Formulaire insertion d'une nouvelle formation -->
     
-        <div class="formulaire text-center mx-auto">
-            <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>
-            
-            <form action="formations.php" method="post" class="px-4 py-3">
-                
-                <div class="form-group">
-                    <label for="titre_form">Titre </label>
-                    <input type="text" class="form-control" name="titre_form" placeholder="Développeur Intégrateur Web" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="stitre_form">Sous-titre </label>
-                    <input type="text" class="form-control" name="stitre_form" placeholder="ThiagoKaylie.co Paris" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="dates_form">Dates </label>
-                    <input type="text" class="form-control" name="dates_form" placeholder="01/2017 à 11/2017" required>
-                </div>        
-                
-    
-                <div class="form-group">
-                    <label for="description_form" class="d-block">Description </label>
-                    <textarea type="text" name="description_form" id="description_form" class="form-control"></textarea>
-                    <script>
-                        // Replace the <textarea id="description_form"> with a CKEditor
-                        // instance, using default configuration.
-                        CKEDITOR.replace( 'description_form' );
-                    </script>
-                </div>
-            
-                <div>
-                    <button type="submit" class="btn btn-primary">Insérer la formation</button>
-                </div>
-            
-            </form>
-        </div>
-    
+        <div class="row">
+            <div class="formulaire text-center mx-auto col-sm-12 col-lg-6">
+                <h2 class="text-center" style="color: black; text-shadow: wheat 2px -1px;font-size: 35px;">Formulaire d'insertion</h2>
+                <form action="formations.php" method="post" class="px-4 py-3">  
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="titre_form">Titre </label>
+                            <input type="text" class="form-control" name="titre_form" placeholder="Développeur Intégrateur Web" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="stitre_form">Sous-titre </label>
+                            <input type="text" class="form-control" name="stitre_form" placeholder="ThiagoKaylie.co Paris" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="dates_form">Dates </label>
+                            <input type="text" class="form-control" name="dates_form" placeholder="01/2017 à 11/2017" required>
+                        </div>            
+                        <div class="form-group col-md-12">
+                            <label for="description_form" class="d-block">Description </label>
+                            <textarea type="text" name="description_form" id="description_form" class="form-control"></textarea>
+                            <script>
+                                // Replace the <textarea id="description_form"> with a CKEditor
+                                // instance, using default configuration.
+                                CKEDITOR.replace( 'description_form' );
+                            </script>
+                        </div>            
+                        <div class="form-group mx-auto">
+                            <button type="submit" class="btn btn-primary">Insérer la formation</button>
+                        </div> 
+                    </div>           
+                </form>
+            </div>   
+        </div> 
 <?php
 require_once 'inc/bas_page.php';

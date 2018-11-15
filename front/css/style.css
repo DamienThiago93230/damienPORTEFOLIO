@@ -80,7 +80,7 @@ svg:not(:root) {
 
 .formulaire{
     font-family: 'Roboto Slab', serif;
-    width: 50%;
+    width: 92%;
     background-image: url(../img/jumbotron4.png);
     margin: 0 auto;
     padding: 20px;
@@ -98,7 +98,7 @@ footer{
     font-size: 40px;
 }
 p{
-    font-family: 'Fredericka the Great', cursive;
+    /* font-family: 'Cinzel', serif; */
     text-shadow: black 5px;
     text-shadow: black 0px 0px;
 }

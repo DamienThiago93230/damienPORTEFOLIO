@@ -88,7 +88,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
 <?php require 'inc/navigation.php';?> 
 
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-2">Vous êtes sur la page des compétences </h1>
+        <h1>Vous êtes sur la page des compétences </h1>
     </div>
 
     <h1 class="text-center mb-4 mt-4">Gestion des compétences</h1>
@@ -137,33 +137,35 @@ if(isset($_GET['order']) && isset($_GET['column'])){
         
         <hr>
         <!-- Insertion d'un nouveau compétence -->
-        <div class="formulaire text-center mx-auto">
-        <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>    
-            <form action="competences.php" method="post">
-                <div class="form-group">
-                    <label for="competence">Compétence</label>
-                    <input type="text" name="competence" placeholder="Nouvelle compétence" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="niveau">Niveau</label>
-                    <input type="text" name="niveau" placeholder="Niveau en chiffre sur 100" class="form-control"  required>
-                </div>
-                <div class="form-group">
-                    <label for="categorie">Catégorie</label>
-                    <select name="categorie" id="categorie" class="form-control">
-                        <option value="Développement">Développement</option>
-                        <option value="Infographie">Infographie</option>
-                        <option value="Gestion de projet">Gestion de projet</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Insérer la compétence</button>
-                </div>
-                
-                  
-            </form>
-        </div>
+        <div class="row">
+            <div class="formulaire col-sm-12 col-lg-6 text-center mx-auto">
+                <h1 class="text-center" style="color: black; text-shadow: wheat 2px -1px;font-size: 35px;" >Formulaire d'insertion</h2>    
+                <form action="competences.php" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="competence">Compétence</label>
+                            <input type="text" name="competence" placeholder="Nouvelle compétence" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="niveau">Niveau</label>
+                            <input type="text" name="niveau" placeholder="Niveau en chiffre sur 100" class="form-control"  required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="categorie">Catégorie</label>
+                            <select name="categorie" id="categorie" class="form-control">
+                                <option value="Développement">Développement</option>
+                                <option value="Infographie">Infographie</option>
+                                <option value="Gestion de projet">Gestion de projet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group mx-auto">
+                            <button type="submit" class="btn btn-primary form-control">Insérer la compétence</button>
+                        </div>
+                    </div><!-- Fin .form-row -->
+                </form>
+            </div><!-- Fin .formulaire -->
+        </div><!-- Fin .row -->
 
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php'; ?>

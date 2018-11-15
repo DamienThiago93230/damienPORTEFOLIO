@@ -131,44 +131,47 @@ $nbr_realisations = $sql -> rowCount(); ?>
     </div> <!-- Fin div tableau -->
     
     <!-- Formulaire insertion d'une nouvelle realisation -->
-    
-        <div class="formulaire text-center mx-auto">
-            <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>
+    <div class="row">
+        <div class="formulaire text-center mx-auto col-sm-12 col-lg-6">
+            <h2 class="text-center" style="color: black; text-shadow: wheat 2px -1px;font-size: 35px;">Formulaire d'insertion</h2>
             
             <form action="realisations.php" method="post" class="px-4 py-3">
                 
-                <div class="form-group">
-                    <label for="titre_real">Titre </label>
-                    <input type="text" class="form-control" name="titre_real" placeholder="Développeur Intégrateur Web" required>
-                </div>
-            
-                <div class="form-group">
-                    <label for="stitre_real">Sous-titre </label>
-                    <input type="text" class="form-control" name="stitre_real" placeholder="ThiagoKaylie.co Paris" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="dates_real">Dates </label>
-                    <input type="text" class="form-control" name="dates_real" placeholder="01/2017 à 11/2017" required>
-                </div>        
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="titre_real">Titre </label>
+                        <input type="text" class="form-control" name="titre_real" placeholder="Développeur Intégrateur Web" required>
+                    </div>
                 
-    
-                <div class="form-group">
-                    <label for="description_real" class="d-block">Description </label>
-                    <textarea type="text" name="description_real" id="description_real" class="form-control"></textarea>
-                    <script>
-                        // Replace the <textarea id="description_form"> with a CKEditor
-                        // instance, using default configuration.
-                        CKEDITOR.replace( 'description_real' );
-                    </script>
-                </div>
-            
-                <div>
-                    <button type="submit" class="btn btn-primary">Insérer la réalisation</button>
-                </div>
+                    <div class="form-group col-md-4">
+                        <label for="stitre_real">Sous-titre </label>
+                        <input type="text" class="form-control" name="stitre_real" placeholder="ThiagoKaylie.co Paris" required>
+                    </div>
+        
+                    <div class="form-group col-md-4">
+                        <label for="dates_real">Dates </label>
+                        <input type="text" class="form-control" name="dates_real" placeholder="01/2017 à 11/2017" required>
+                    </div>        
+                    
+        
+                    <div class="form-group col-md-12">
+                        <label for="description_real" class="d-block">Description </label>
+                        <textarea type="text" name="description_real" id="description_real" class="form-control"></textarea>
+                        <script>
+                            // Replace the <textarea id="description_form"> with a CKEditor
+                            // instance, using default configuration.
+                            CKEDITOR.replace( 'description_real' );
+                        </script>
+                    </div>
+                
+                    <div class="form-group mx-auto">
+                        <button type="submit" class="btn btn-primary">Insérer la réalisation</button>
+                    </div>
+                </div><!-- Fin .form-row -->
             
             </form>
-        </div>
+        </div><!-- Fin .formulaire -->
+    </div><!-- Fin .row -->
     
 <?php
 require_once 'inc/bas_page.php';

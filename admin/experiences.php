@@ -116,34 +116,38 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
         
         <hr>
         <!-- Insertion d'un nouveau formation -->
-        <div class="formulaire text-center mx-auto">
-        <h2 class="text-center mb-4" style="color: black">Formulaire d'insertion</h2>
-            <form action="experiences.php" method="post">
-                <div class="form-group">
-                    <label for="titre_exp">Titre experience</label>
-                    <input type="text" name="titre_exp" placeholder="Nouvelle experience" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="stitre_exp">Experience</label>
-                    <input type="text" name="stitre_exp" placeholder="Experience" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="dates_exp">Date experience</label>
-                    <input type="text" name="dates_exp" placeholder="Date experience" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="description_exp">Description experience</label>
-                    <textarea type="text" name="description_exp" id="description_exp" class="form-control" required></textarea>
-                    <script>
-                        // Replace the <textarea id="description_form"> with a CKEditor
-                        // instance, using default configuration.
-                        CKEDITOR.replace( 'description_exp' );
-                    </script>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="btn btn-primary">Insérer votre expérience</button>
-                </div>
-            </form>
-        </div>
+        <div class="row">
+            <div class="formulaire text-center mx-auto col-sm-12 col-lg-6">
+                <h2 class="text-center mb-4" style="color: black; text-shadow: wheat 2px -1px;font-size: 35px;">Formulaire d'insertion</h2>
+                <form action="experiences.php" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="titre_exp">Titre experience</label>
+                            <input type="text" name="titre_exp" placeholder="Nouvelle experience" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="stitre_exp">Experience</label>
+                            <input type="text" name="stitre_exp" placeholder="Experience" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="dates_exp">Date experience</label>
+                            <input type="text" name="dates_exp" placeholder="Date experience" class="form-control" required>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label for="description_exp">Description experience</label>
+                            <textarea type="text" name="description_exp" id="description_exp" class="form-control" required></textarea>
+                            <script>
+                                // Replace the <textarea id="description_form"> with a CKEditor
+                                // instance, using default configuration.
+                                CKEDITOR.replace( 'description_exp' );
+                            </script>
+                        </div>
+                        <div class="form-group mx-auto">
+                            <button type="submit" class="btn btn-primary">Insérer votre expérience</button>
+                        </div>
+                    </div><!-- Fin .form-row -->
+                </form>
+            </div><!-- Fin .formulaire -->
+        </div><!-- Fin .row -->
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php';?> 

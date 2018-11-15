@@ -68,60 +68,63 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
 
     <div class="text-center table-responsive table-hover mt-4">
         <h1 class="text-center mb-4">Gestion des loisirs</h1>
-            <?php 
-                // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-                $sql = $pdoCV -> prepare("SELECT * FROM t_loisirs WHERE id_utilisateur ='$id_utilisateur'");
-                $sql -> execute();
-                $nbr_loisirs = $sql -> rowCount();
-            ?>
+        <?php 
+            // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
+            $sql = $pdoCV -> prepare("SELECT * FROM t_loisirs WHERE id_utilisateur ='$id_utilisateur'");
+            $sql -> execute();
+            $nbr_loisirs = $sql -> rowCount();
+        ?>
+    
         
-            
-            <table class="table table-bordered mx-auto">
-            <caption>La liste des loisirs : <?php echo $nbr_loisirs; ?></caption>
-                <thead class="thead-dark">
-                    <tr>
-                        <th style="color: wheat">Loisirs</th>
-                        <th style="color: wheat">Modifier</th>
-                        <th style="color: wheat">Supprimer</th>
-                    </tr>        
-                </thead>
-                <?php 
-                while($ligne_loisir = $sql -> fetch())
-                    {
-                ?>
-                <tbody>
-                    <tr>
-                        <td class="td"><?php echo $ligne_loisir['loisir']; ?></td>
-                        <td>
-                            <a class="href" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>" onclick="return(confirm('Etes-vous certain de vouloir modifier ce loisir ?'))"><i class="fas fa-edit"></i></a> 
-                        </td>
-                        <td class="td">
-                            <a class="href" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer ce loisir ?'))"><i class="fas fa-trash-alt text-danger"></i></a> 
-                        </td>
-                    </tr>
-                <?php 
-                    } 
-                ?>
-                </tbody>
-            </table>
-            
-            <hr>
-            <!-- Insertion d'un nouveau loisir -->
-            <div class="formulaire mx-auto">
-            <h2 class="text-center" style="color: black">Formulaire d'insertion</h2>
-            
-                <form action="loisirs.php" method="post">
-                    <div class="form-group">
+        <table class="table table-bordered mx-auto">
+        <caption>La liste des loisirs : <?php echo $nbr_loisirs; ?></caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th style="color: wheat">Loisirs</th>
+                    <th style="color: wheat">Modifier</th>
+                    <th style="color: wheat">Supprimer</th>
+                </tr>        
+            </thead>
+            <?php 
+            while($ligne_loisir = $sql -> fetch())
+                {
+            ?>
+            <tbody>
+                <tr>
+                    <td class="td"><?php echo $ligne_loisir['loisir']; ?></td>
+                    <td>
+                        <a class="href" href="modif_loisir.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>" onclick="return(confirm('Etes-vous certain de vouloir modifier ce loisir ?'))"><i class="fas fa-edit"></i></a> 
+                    </td>
+                    <td class="td">
+                        <a class="href" href="loisirs.php?id_loisir=<?php echo $ligne_loisir['id_loisir']; ?>" onclick="return(confirm('Etes-vous certain de vouloir supprimer ce loisir ?'))"><i class="fas fa-trash-alt text-danger"></i></a> 
+                    </td>
+                </tr>
+            <?php 
+                } 
+            ?>
+            </tbody>
+        </table>
+        <hr>
+    </div> 
+    <!-- Insertion d'un nouveau loisir -->
+    <div class="row">
+        <div class="formulaire text-center mx-auto col-sm-12 col-lg-6">
+        <h2 class="text-center" style="color: black; text-shadow: wheat 2px -1px;font-size: 35px;">Formulaire d'insertion</h2>
+        
+            <form action="loisirs.php" method="post">
+                <div class="form-row">
+                    <div class="form-group col-md-12">
                         <label for="loisir">Loisir</label>
                         <input type="text" name="loisir" placeholder="Nouveau loisir" class="form-control" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group mx-auto">
                         <button type="submit" class="btn btn-primary" >Insérer le loisir</button>
                     </div>
-                </form>
-            </div>
-
-    </div> 
+                </div>
+            </form>
+        </div><!-- Fin .formulaire -->
+    </div><!-- Fin .row -->
+    
 
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php'; ?>
