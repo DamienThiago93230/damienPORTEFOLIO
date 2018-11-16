@@ -19,7 +19,7 @@ $ligne_utilisateur = $sql-> fetch();
 
 
 <!-- Je met le contenu de la page -->
-<div class="jumbotron text-center mb-4 col-lg-12">
+<div class="jumbotron text-center mb-4 col-md-12 col-lg-12">
  
 <svg height='200'>
   <filter id='money'>

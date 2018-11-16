@@ -33,36 +33,40 @@ require_once 'inc/haut_page.php';
     
     
     <!-- Formulaire insertion d'une nouvelle message -->
-        <div class="formulaire text-center mx-auto">
-            <h2 class="text-center" style="color: black">Formulaire de contact</h2>
-            
-            <form action="messages.php" method="post" class="px-4 py-3">
+        <div class="row">
+            <div class="formulaire text-center mx-auto col-sm-12 col-lg-6">
+                <h2 class="text-center" style="color: black">Formulaire de contact</h2>
                 
-                <div class="form-group">
-                    <label for="nom">Nom </label>
-                    <input type="text" class="form-control" name="nom" placeholder="John" required>
-                </div>
+                <form action="messages.php" method="post" class="px-4 py-3"> 
+                    
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="nom">Nom </label>
+                            <input type="text" class="form-control" name="nom" placeholder="John" required>
+                        </div>
+                    
+                        <div class="form-group col-md-4">
+                            <label for="email">Email </label>
+                            <input type="text" class="form-control" name="email" placeholder="xxx@xxx.xx" required>
+                        </div>
             
-                <div class="form-group">
-                    <label for="email">Email </label>
-                    <input type="text" class="form-control" name="email" placeholder="xxx@xxx.xx" required>
-                </div>
-    
-                <div class="form-group">
-                    <label for="sujet">Sujet </label>
-                    <input type="text" class="form-control" name="sujet" placeholder="Sujet" required>
-                </div>        
+                        <div class="form-group col-md-4">
+                            <label for="sujet">Sujet </label>
+                            <input type="text" class="form-control" name="sujet" placeholder="Sujet" required>
+                        </div>        
+                        
+                        <div class="form-group col-md-12">
+                            <label for="message" class="d-block">Message </label>
+                            <textarea type="text" name="message" id="message" class="form-control"></textarea>
+                        </div>
+                    
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Insérer la message</button>
+                        </div>
+                    </div>
                 
-                <div class="form-group">
-                    <label for="message" class="d-block">Message </label>
-                    <textarea type="text" name="message" id="message" class="form-control"></textarea>
-                </div>
-            
-                <div>
-                    <button type="submit" class="btn btn-primary">Insérer la message</button>
-                </div>
-            
-            </form>
+                </form>
+            </div>
         </div>
     
 <?php

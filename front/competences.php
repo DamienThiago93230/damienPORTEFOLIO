@@ -59,9 +59,9 @@ require 'connexion.php';
     <div class="container-fluid">
         <section class="row rowcomp"> 
             
-                <?php 
-                    while($ligne_competence = $sql -> fetch()) {
-                ?>
+        <?php 
+            while($ligne_competence = $sql -> fetch()) {
+        ?>
             <div class="col-lg-3 col-md-4 col-sm-6">
                 <!-- cercle de chaque compétence avec son titre en h3 -->
                 <h1 class="competence"><?= $ligne_competence['competence']; ?></h1>
@@ -75,7 +75,7 @@ require 'connexion.php';
                     <?= $ligne_competence['niveau']; ?>%</text>
                 </svg> 
             </div>
-            <?php 
+        <?php 
             } // Fin de la boucle while
         ?>
     
@@ -85,9 +85,6 @@ require 'connexion.php';
     
     <!-- lien CDN jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script> 
-
-    <!-- lien script perso -->
-    <script src="animation/script.js"></script>
 
     
     <footer class="text-center p-2">
@@ -115,9 +112,9 @@ require 'connexion.php';
         </div>
     </footer>
     </div> <!-- Fin container-fluid -->
-    <!-- lien bootstrap -->
-  
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+
+    <!-- lien bootstrap -->  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
 </body>
 </html>
