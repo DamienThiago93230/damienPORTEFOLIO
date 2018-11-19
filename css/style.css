@@ -1,4 +1,7 @@
-
+main{
+    min-height: 85vh;
+    
+}
 .navbar{
     background: black;
     font-family: 'Cinzel', serif;
@@ -74,7 +77,7 @@ svg:not(:root) {
 .jumbotron{
     background-image: url(../img/jumbotron4.png);
     color: wheat;
-    height: 288px;
+    height: 220px;
     padding-top: 1px;
 }
 
@@ -87,6 +90,22 @@ svg:not(:root) {
     border-radius: 20px;
     color: wheat;
 }
+.formulaireContact{
+    font-family: 'Roboto Slab', serif;
+    width: 92%;
+    background-image: url(../img/jumbotron4.png);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    color: wheat;
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
+textarea.form-control {
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+}
 
 footer{
     background: black;
@@ -97,10 +116,15 @@ footer{
     letter-spacing: 3px;
     font-size: 40px;
 }
+
 p{
     /* font-family: 'Cinzel', serif; */
     text-shadow: black 5px;
     text-shadow: black 0px 0px;
+}
+footer p{
+    font-family: 'Cinzel', serif;
+    
 }
 
 h1{
@@ -141,6 +165,7 @@ main{
     margin-right: 135px;
     margin-left: 125px;
 }
+
 
 /* page formation */
 .card-header:first-child {
@@ -245,6 +270,8 @@ svg.radial-progress circle {
 /* Primary */
 
 svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
+
+
 
 
 

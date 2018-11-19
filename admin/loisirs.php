@@ -115,7 +115,7 @@ if (isset($_GET['id_loisir'])) // On récupére ce que je supprime dans l'url pa
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label for="loisir">Loisir</label>
-                        <input type="text" name="loisir" placeholder="Nouveau loisir" class="form-control" required>
+                        <input type="text" name="loisir" placeholder="Nouveau loisir" class="form-control formText mx-auto" required>
                     </div>
                     <div class="form-group mx-auto">
                         <button type="submit" class="btn btn-primary" >Insérer le loisir</button>

@@ -24,9 +24,6 @@ require 'connexion.php';
     
     <!-- Mon style CSS -->
     <link rel="stylesheet" href="css/style.css">
-    
-    <link rel="stylesheet" href="css/style.css">
-
     <script src="js/script.js"></script>
     
     <title>SiteCV</title>
@@ -43,13 +40,7 @@ require 'connexion.php';
     ?>
     
     <div class="jumbotron text-center mb-4">
-        <h1 class="display-4">Vous êtes sur la page <br> compétences</h1>
-        <hr class="my-4">
-        <p style="color: black">Découvrez les compétences que j'ai acquis au court de ma formation .</p>
-        <!-- <p class="icon">
-            <i class="fab fa-php"></i><i class="fab fa-html5"></i><i class="fab fa-css3-alt"></i><i class="fab fa-js-square"></i><i class="fab fa-wordpress-simple"></i>
-
-        </p> -->
+        <h1 class="display-4">Découvrez les compétences que j'ai acquis au court de ma formation .</h1>
     </div>
     
     <!-- ANIMATION -->
@@ -88,29 +79,29 @@ require 'connexion.php';
 
     
     <footer class="text-center p-2">
-        <div class="row mx-auto">
-            <div class="col-lg-4">
-            <h4 style="color: gold">Me contacter</h4>
-                <p><strong>Téléphone :</strong> 06-18-12-25-64</p>
-                <p><strong>Email:</strong> santo.damien@hotmail.com</p>
+            <div class="row mx-auto">
+                <div class="col-lg-4">
+                <h4 style="color: gold">Me contacter</h4>
+                    <p><strong style="color: #f47f33">Téléphone :</strong> 06-18-12-25-64</p>
+                    <p><strong style="color: #f47f33">Email:</strong> santo.damien@hotmail.com</p>
+                </div>
+                <div class="col-lg-4">
+                <h4 style="color: gold">Réseaux</h4>
+                    <p class="reseaux">
+                        <a style="color: white" href="https://github.com/DamienThiago93230" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </p>
+                </div>
+                <div class="col-lg-4">
+                <h4 style="color: gold">Message</h4>
+                    <a class="reseaux" href="messages.php" style="color:wheat"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div><!-- Fin .row -->
+                
+            <div class="col-lg-12">
+                <p style="color: #f47f33">Copyright &copy; Mon siteCV - 2018</p>
             </div>
-            <div class="col-lg-4">
-            <h4 style="color: gold">Réseaux</h4>
-                <p class="reseaux">
-                    <a style="color: white" href="https://github.com/DamienThiago93230" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/feed/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                </p>
-            </div>
-            <div class="col-lg-4">
-            <h4 style="color: gold">Message</h4>
-                <a class="reseaux" href="messages.php" style="color:wheat"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div><!-- Fin .row -->
-            
-        <div class="col-lg-12">
-            <p >Copyright &copy; Mon siteCV - 2018</p>
-        </div>
-    </footer>
+      </footer>
     </div> <!-- Fin container-fluid -->
 
     <!-- lien bootstrap -->  
