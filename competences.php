@@ -41,6 +41,7 @@ require 'connexion.php';
     
     <div class="jumbotron text-center mb-4">
         <h1 class="display-4">Découvrez les compétences que j'ai acquis au court de ma formation .</h1>
+        <hr>
     </div>
     
     <!-- ANIMATION -->

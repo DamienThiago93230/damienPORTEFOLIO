@@ -4,7 +4,7 @@ main{
 }
 .navbar{
     background: black;
-    font-family: 'Cinzel', serif;
+    font-family: 'PT Serif', serif;
     
 }
 .nav-link{
@@ -20,31 +20,22 @@ svg:not(:root) {
     width: 100%;
 }
 
-.titre {
-  fill: #35322a;
-  filter: url('#money');
-  font-family: 'Playfair Display', 'Georgia', serif;
-  font-size: 100px;
-  font-weight: 900;
-  height: 20%;
-   
+.img{/* Titre de la page index */
+    vertical-align: middle;
+    height: 25vh;
+    width: 100%;
 }
-.titre1 {
-    fill: #35322a;
-    filter: url('#money');
-    font-family: 'Playfair Display', 'Georgia', serif;
-    font-size: 70px;
-    font-weight: 900;
-    height: 20%;
-}
+
+
 
 .rounded {
     border-radius: 10.25rem !important;
     width: 200px;
     height: 200px;
-    margin-top: 14%;
+    margin-top: 10%;
     box-shadow: black 17px 9px 41px 10px;
 }
+
 
 .h1index{
     color: wheat;
@@ -56,18 +47,27 @@ svg:not(:root) {
     font-family: 'Playfair Display', 'Georgia', serif;
 }
 
+.imgPresentation{
+    width: 40%;
+}
+
+.presentation1{
+    width: 50%;
+}
+
 .presentation{
     width: 100%;
-    margin-left:6%; 
     font-size: 22px;  
-    margin-top: 0px
+    margin-top: 5px;
+    font: 22px/1.25 'Playfair Display', 'Georgia', serif;
 }
+
 .form{
-    font-size: 250%;
-    box-shadow: black 2px 17px 10px;
-    margin-bottom: 40px;
-    margin-top: 20px;
-    border-radius: 0px 0px 20px 20px;
+    font-size: 150%;
+    box-shadow: black 0px -8px 15px;
+    margin-bottom: 16px;
+    margin-top: 85px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .container-fluid{
@@ -116,12 +116,19 @@ footer{
     letter-spacing: 3px;
     font-size: 40px;
 }
-
+.pIndex{
+    font-family: 'PT Serif', serif;
+    text-shadow: black 5px;
+    text-shadow: black 0px 0px;
+    width: 85%;
+    margin: 0 auto;
+}
 p{
-    /* font-family: 'Cinzel', serif; */
+    font-family: 'PT Serif', serif;
     text-shadow: black 5px;
     text-shadow: black 0px 0px;
 }
+
 footer p{
     font-family: 'Cinzel', serif;
     
@@ -161,10 +168,7 @@ main{
     width: 100%;/* Pour la taille du tableau loisir */
 }
 
-.row {
-    margin-right: 135px;
-    margin-left: 125px;
-}
+
 
 
 /* page formation */
@@ -196,7 +200,7 @@ main{
 
 body {
   color: black;
-  font: 16px/1.25 'Raleway', sans-serif;
+  font: 18px/1.25 'Raleway', sans-serif;
   margin: 0;
   
 }
