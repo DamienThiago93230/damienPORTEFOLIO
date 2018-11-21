@@ -43,6 +43,7 @@ if (isset($_POST['competence'])) {
     $pdoCV -> exec(" UPDATE t_competences SET competence = '$competence', niveau='$niveau', categorie = '$categorie' WHERE id_competence = '$id_competence' ");
     header('location: ../admin/competences.php');
     exit();
+    
 } // fin du (isset($_POST['competence']))
 
 // je récupère l'id de ce que je mets à jour
@@ -56,8 +57,6 @@ $ligne_competence = $sql -> fetch(); // va récupérer les données
 
 <!-- Ici, j'inclus ma page naviagtion.php -->
 <?php require 'inc/navigation.php'; ?>
-
-    
         <h1 class="text-center">Mise à jour d'une compétence</h1>
         <!-- Mise à jour d'une nouvelle compétence formulaire  -->
         <div class="formulaire mx-auto text-center">

@@ -49,7 +49,7 @@ require 'connexion.php';
     <!-- debut section -->
     
     <div class="container-fluid">
-        <section class="row rowcomp"> 
+        <section class="row rowcomp light"> 
             
         <?php 
             while($ligne_competence = $sql -> fetch()) {

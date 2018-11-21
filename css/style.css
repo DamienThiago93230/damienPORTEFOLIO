@@ -103,7 +103,7 @@ svg:not(:root) {
 }
 textarea.form-control {
     height: auto;
-    width: 50%;
+    width: 75%;
     margin: 0 auto;
 }
 
@@ -276,7 +276,55 @@ svg.radial-progress circle {
 svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
 
 
-
+/* Halo lumineux */
+.light div {
+	position: relative;
+}
+.light div::before {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 0;
+	height: 0;
+	background: #f480337e;
+	border-radius: 100%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	opacity: 0;
+}
+.light div:hover::before {
+	-webkit-animation: circle .75s;
+	animation: circle .75s;
+}
+@-webkit-keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
+@keyframes circle {
+	0% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	100% {
+		width: 200%;
+		height: 200%;
+		opacity: 0;
+	}
+}
 
 
 
