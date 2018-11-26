@@ -27,6 +27,7 @@
     color: wheat;
 }
 
+
 footer{
     background: black;
     color: wheat;
@@ -80,10 +81,14 @@ th{
 .login{
     margin-top: 25vh;
 }
+.authentification{
+    min-height: 100vh;
+    background-image: url(../img/jumbotron3.png);
+}
 
 main{
     min-height: 100vh;
-    background-image: url(../img/jumbotron3.png);
+    /* background-image: url(../img/jumbotron3.png); */
 }
 
 .table .thead-dark th {
@@ -98,5 +103,12 @@ main{
 
 .formText {
     width: 50%;
+}
+
+/* Page compétence */
+.icon{
+    font-size: 75px;
+    margin-top: 4%;
+    margin-bottom: 1%;
 }
 

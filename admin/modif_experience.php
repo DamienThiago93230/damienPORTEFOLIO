@@ -66,7 +66,7 @@ $ligne_experience = $sql -> fetch(); // va récupérer les données
         <div class="form-group"><!-- Début .form-group -->
             <form action="modif_experience.php" method="post">
                <div class="form-group">
-                    <label for="titre_exp">Titre de l'expérience </label>                
+                    <label for="titre_exp">Titre de l'expérience</label>                
                     <input type="text" class="form-control" name="titre_exp" value="<?php echo $ligne_experience['titre_exp']; ?>" required>    
                </div>
         

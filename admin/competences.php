@@ -101,7 +101,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
         ?>
     
        
-    <table class="table table-bordered text-center mx-auto">
+    <table class="table table-bordered table-hover text-center mx-auto">
             <caption>La liste des compétences : <?php echo $nbr_competence; ?></caption>
             <thead class="thead-dark">
                 <tr class="text-center">
@@ -119,10 +119,10 @@ if(isset($_GET['order']) && isset($_GET['column'])){
             ?>
             <tbody>
                 <tr>
-                    <td class="td"><?php echo $ligne_competence['competence']; ?></td>
-                    <td class="td"><?php echo $ligne_competence['niveau']; ?>/100</td>
-                    <td class="td"><?php echo $ligne_competence['categorie']; ?></td>
-                    <td class="td">
+                    <td><?php echo $ligne_competence['competence']; ?></td>
+                    <td><?php echo $ligne_competence['niveau']; ?>/100</td>
+                    <td><?php echo $ligne_competence['categorie']; ?></td>
+                    <td>
                         <a href="modif_competence.php?id_competence=<?php echo $ligne_competence['id_competence']; ?>" onclick="return(confirm('Etes-vous certain de vouloir modifier cette compétence ?'))"><i class="fas fa-edit"></i></a> 
                     </td>
                     <td class="td">
@@ -137,7 +137,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
         
         <hr>
         <!-- Insertion d'un nouveau compétence -->
-        <div class="row">
+        <div class="row">  
             <div class="formulaire col-sm-12 col-lg-6 text-center mx-auto">
                 <h1 class="text-center" style="color: black; text-shadow: wheat 2px -1px;font-size: 35px;" >Formulaire d'insertion</h2>    
                 <form action="competences.php" method="post">
@@ -165,7 +165,7 @@ if(isset($_GET['order']) && isset($_GET['column'])){
                     </div><!-- Fin .form-row -->
                 </form>
             </div><!-- Fin .formulaire -->
-        </div><!-- Fin .row -->
+    </div><!-- Fin .row -->
 
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php'; ?>

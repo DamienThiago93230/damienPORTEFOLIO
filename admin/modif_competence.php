@@ -57,7 +57,10 @@ $ligne_competence = $sql -> fetch(); // va récupérer les données
 
 <!-- Ici, j'inclus ma page naviagtion.php -->
 <?php require 'inc/navigation.php'; ?>
-        <h1 class="text-center">Mise à jour d'une compétence</h1>
+<div class="icon text-center">
+    <h1>Mise à jour d'une compétence</h1>
+            <i class="fab fa-html5" style="color: orange"></i>  <i class="fab fa-php"></i>  <i class="fab fa-css3-alt" style="color: blue"></i> <i class="fab fa-js-square"></i>  <i class="fab fa-wordpress" style="color: lightblue"></i>  <i class="fas fa-database"></i>
+        </div>
         <!-- Mise à jour d'une nouvelle compétence formulaire  -->
         <div class="formulaire mx-auto text-center">
             <form action="modif_competence.php" method="post">
@@ -105,6 +108,9 @@ $ligne_competence = $sql -> fetch(); // va récupérer les données
                     <button class="btn btn-primary" type="submit">Modifier</button>
                 </div>
             </form><!-- fin form -->
+        </div>
+        <div class="icon text-center">
+            
         </div>
    
 

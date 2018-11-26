@@ -42,45 +42,40 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
 
     <main>
         <div class="jumbotron text-center mb-4">
-            <h1>Découvrez mon parcours professionel .</h1>
+            <h1 class="display-4">Découvrez mon parcours professionel .</h1>
+            
+            <hr class="my-4">
+            <p>Découvrez les....</p>
         </div>
     
-        <h1 class="text-center mb-4 mt-4">Mes experiences</h1>
-            <?php 
-                // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
-                $sql = $pdoCV -> prepare("SELECT * FROM t_experiences WHERE id_utilisateur = '1'");
-                $sql -> execute();
-                $nbr_experiences = $sql -> rowCount();
-            ?>
         
-        <div class="text-center table-responsive table-hover mt-4">
-                <table class="table table-bordered mb-4 mx-auto">
-                <caption>La liste des experiences : <?php echo $nbr_experiences; ?></caption>
-                    <thead class="thead-dark">
-                        <tr>
-                            <th style="color: wheat">Titre experience</th>
-                            <th style="color: wheat">Sous titre</th>
-                            <th style="color: wheat">Date de experience</th>
-                            <th style="color: wheat">Description experience</th>
-                        </tr>        
-                    </thead>
-                    <?php 
-                    while($ligne_experience = $sql -> fetch())
-                        {
-                    ?>
-                    <tbody>
-                        <tr>
-                            <td><?php echo $ligne_experience['titre_exp']; ?></td>
-                            <td><?php echo $ligne_experience['stitre_exp']; ?></td>
-                            <td><?php echo $ligne_experience['dates_exp']; ?></td>
-                            <td><?php echo $ligne_experience['description_exp']; ?></td>
-                        </tr>
-                    <?php 
-                        } 
-                    ?>
-                    </tbody>
-                </table>
-            </div>
+        <?php 
+            // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
+            $sql = $pdoCV -> prepare("SELECT * FROM t_experiences WHERE id_utilisateur = '1'");
+            $sql -> execute();
+            $nbr_experiences = $sql -> rowCount();
+        ?>
+        
+        <div class="text-center mt-4">
+            <h1 class="text-center mb-4 mt-4">Mes experiences</h1>
+            <div class="row mx-auto">
+                <?php 
+                while($ligne_experience = $sql -> fetch())
+                    {
+                ?>
+                <div class="col-lg-3">
+                    <div class="card mb-5 mt-4 mx-2 cardForm mx-auto" style="max-width: 40rem; color: wheat">
+                        <div class="card-header"><h1><?php echo $ligne_experience['titre_exp'];?> </h1><?php echo $ligne_experience['stitre_exp'];?>//<?php echo $ligne_experience['dates_exp'];?><br></div>
+                        <div class="card-body" style="color:black">
+                            <?php echo $ligne_experience['description_exp'];?>
+                        </div>
+                    </div>
+                </div><!-- Fin .lg-3 --> 
+                <?php 
+                    } // Fin de la boucle while
+                ?>    
+            </div> <!-- Fin .row -->  
+        </div>
     </main>
         
        

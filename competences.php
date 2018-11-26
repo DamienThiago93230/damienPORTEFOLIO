@@ -83,8 +83,8 @@ require 'connexion.php';
             <div class="row mx-auto">
                 <div class="col-lg-4">
                 <h4 style="color: gold">Me contacter</h4>
-                    <p><strong style="color: #f47f33">Téléphone :</strong> 06-18-12-25-64</p>
-                    <p><strong style="color: #f47f33">Email:</strong> santo.damien@hotmail.com</p>
+                    <p>Téléphone : <i style="color: #f47f33"><strong>06 18 12 25 64</strong></i></p>
+                    <p>Email : <a href="messages.php" target="_blank" style="color: #f47f33"><i style="color: #f47f33"><strong>santo.damien@hotmail.com</strong></i></a></p>
                 </div>
                 <div class="col-lg-4">
                 <h4 style="color: gold">Réseaux</h4>

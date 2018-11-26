@@ -37,7 +37,7 @@ require_once 'inc/haut_page.php';
 ?>
     
 	
-		<main>
+		<main class="authentification">
 			<div class="container-fluid">
 				<div class="row login">
 					<div class="col-sm-6 col-md-4 col-md-offset-4">
