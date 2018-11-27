@@ -14,19 +14,11 @@ main{
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
 
-
-svg:not(:root) {
-    overflow: hidden;
-    width: 100%;
-}
-
 .img{/* Titre de la page index */
     vertical-align: middle;
     height: 25vh;
     width: 100%;
 }
-
-
 
 .rounded {
     border-radius: 10.25rem !important;
@@ -35,7 +27,6 @@ svg:not(:root) {
     margin-top: 10%;
     box-shadow: black 17px 9px 41px 10px;
 }
-
 
 .h1index{
     color: wheat;
@@ -90,6 +81,7 @@ svg:not(:root) {
     border-radius: 20px;
     color: wheat;
 }
+
 .formulaireContact{
     font-family: 'Roboto Slab', serif;
     width: 92%;
@@ -101,28 +93,26 @@ svg:not(:root) {
     margin-bottom: 3%;
     margin-top: 3%;
 }
+
 textarea.form-control {
     height: auto;
     width: 75%;
     margin: 0 auto;
 }
 
-footer{
-    background: black;
-    color: wheat;
-}
-
 .reseaux{
     letter-spacing: 3px;
     font-size: 40px;
 }
+
 .pIndex{
     font-family: 'PT Serif', serif;
     text-shadow: black 5px;
     text-shadow: black 0px 0px;
-    width: 85%;
+    width: 94%;
     margin: 0 auto;
 }
+
 p{
     font-family: 'PT Serif', serif;
     text-shadow: black 5px;
@@ -271,10 +261,7 @@ svg.radial-progress circle {
 }
 
 /*** COLORS ***/
-/* Primary */
-
 svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
-
 
 /* Halo lumineux */
 .light div {
@@ -324,6 +311,11 @@ svg.radial-progress:nth-of-type(6n+1) circle { stroke : rgb(253, 87, 26); }
 		height: 200%;
 		opacity: 0;
 	}
+}
+/* FOOTER */
+footer{
+    background: black;
+    color: wheat;
 }
 
 

@@ -1,36 +1,35 @@
 <?php require 'connexion.php';
 
-// Récupère les données de l'utilisateur par son id
-$sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'"); 
-$ligne_utilisateur = $sql-> fetch();
+    // Récupère les données de l'utilisateur par son id
+    $sql = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'"); 
+    $ligne_utilisateur = $sql-> fetch();
 
+    // insertion d'un formulaire
+    if (isset($_POST['titre_exp'])) { // si on a reçu une nouvelle expation
+        if ($_POST['titre_exp'] !='' && $_POST['stitre_exp'] !='' && $_POST['stitre_exp'] !='' && $_POST['dates_exp'] !='' && $_POST['description_exp'] !='' ) {
 
-// insertion d'un formulaire
-if (isset($_POST['titre_exp'])) { // si on a reçu une nouvelle expation
-    if ($_POST['titre_exp'] !='' && $_POST['stitre_exp'] !='' && $_POST['stitre_exp'] !='' && $_POST['dates_exp'] !='' && $_POST['description_exp'] !='' ) {
+            $titre_exp = addslashes($_POST['titre_exp']);
+            $stitre_exp = addslashes($_POST['stitre_exp']);
+            $dates_exp = addslashes($_POST['dates_exp']);
+            $description_exp = addslashes($_POST['description_exp']);
+            $pdoCV -> exec(" INSERT INTO t_experiences VALUES (NULL, '$titre_exp', '$stitre_exp', '$dates_exp', '$description_exp', '$id_utilisateur') ");
 
-        $titre_exp = addslashes($_POST['titre_exp']);
-        $stitre_exp = addslashes($_POST['stitre_exp']);
-        $dates_exp = addslashes($_POST['dates_exp']);
-        $description_exp = addslashes($_POST['description_exp']);
-        $pdoCV -> exec(" INSERT INTO t_experiences VALUES (NULL, '$titre_exp', '$stitre_exp', '$dates_exp', '$description_exp', '$id_utilisateur') ");
+            header("location: ../admin/experiences.php");
+            exit(); 
+
+        } // ferme le if n'est pas vide
+    } // fin de isset($_POST['experience'])
+
+    // Suppression d'un élément(ici : experience) de la BDD
+    if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'url par son id
+    {
+        $efface = $_GET['id_experience']; // je passe l'id dans une variable $efface
+        $sql = " DELETE FROM t_experiences WHERE id_experience='$efface' "; // Requête pur supprimer un élément de la BDD
+
+        $pdoCV -> query($sql); // On peut le faire avec exec() également
 
         header("location: ../admin/experiences.php");
-        exit(); 
-
-    } // ferme le if n'est pas vide
-} // fin de isset($_POST['experience'])
-
-// Suppression d'un élément(ici : experience) de la BDD
-if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'url par son id
-{
-    $efface = $_GET['id_experience']; // je passe l'id dans une variable $efface
-    $sql = " DELETE FROM t_experiences WHERE id_experience='$efface' "; // Requête pur supprimer un élément de la BDD
-
-    $pdoCV -> query($sql); // On peut le faire avec exec() également
-
-    header("location: ../admin/experiences.php");
-}// ferme le if isset $_GET pour suppression
+    }// ferme le if isset $_GET pour suppression
 
 ?>
 
@@ -47,7 +46,6 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
             <hr class="my-4">
             <p>Découvrez les....</p>
         </div>
-    
         
         <?php 
             // Requête pour compter et chercher plusieurs enregistrements on ne peut compter qui si on a préparer(avec : prepare) la rrequête
@@ -60,6 +58,7 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
             <h1 class="text-center mb-4 mt-4">Mes experiences</h1>
             <div class="row mx-auto">
                 <?php 
+                /* Boucle pour récupérer chaque experience et l'afficher dans une card propre a chacune */
                 while($ligne_experience = $sql -> fetch())
                     {
                 ?>
@@ -75,9 +74,8 @@ if (isset($_GET['id_experience'])) // On récupére ce que je supprime dans l'ur
                     } // Fin de la boucle while
                 ?>    
             </div> <!-- Fin .row -->  
-        </div>
+        </div><!-- Fin .text-center -->
     </main>
-        
        
 <!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
 <?php require 'inc/bas_page.php';?> 
