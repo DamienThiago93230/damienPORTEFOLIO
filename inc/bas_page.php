@@ -1,9 +1,6 @@
 <?php require 'connexion.php';?>
-
- 
-  <!-- Footer--> 
-  
-      <hr>
+  <!-- Footer-->   
+    <hr>
     <footer class="text-center p-2">
         <div class="row mx-auto">
             <div class="col-lg-4">

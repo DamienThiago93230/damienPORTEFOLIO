@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-lg-6">
             <h4 style="color: gold">Me contacter</h4>
-                <p>Téléphone : <i style="color: #1682c9"><strong>06 18 12 25 64</strong></i></p>
-                <p>Email : <a href="messages.php" target="_blank" ><i style="color: #1682c9"><strong>santo.damien@hotmail.com</strong></i></a></p>
+                <p>Téléphone : <i style="color: #1682c9"><strong><?php echo $ligne_utilisateur['portable'];?></strong></i></p>
+                <p>Email : <a href="messages.php" target="_blank" ><i style="color: #1682c9"><strong><?php echo $ligne_utilisateur['email'];?></strong></i></a></p>
             </div>
             <div class="col-lg-6">
             <h4 style="color: gold">Réseaux</h4>

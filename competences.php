@@ -37,6 +37,10 @@ require 'connexion.php';
         // requête pour chercher toutes les compétences
         $sql = $pdoCV -> prepare("SELECT * FROM t_competences WHERE id_utilisateur = 1 ORDER BY niveau DESC");
         $sql -> execute();
+
+        // Récupère les données de l'utilisateur par son id
+        $sql2 = $pdoCV -> query(" SELECT * FROM t_utilisateurs WHERE id_utilisateur = '1'"); 
+        $ligne_utilisateur = $sql2-> fetch();
         ?>
     
         <div class="jumbotron text-center mb-4">
@@ -72,8 +76,8 @@ require 'connexion.php';
             <div class="row mx-auto">
                 <div class="col-lg-4">
                 <h4 style="color: gold">Me contacter</h4>
-                    <p>Téléphone : <i style="color: #f47f33"><strong>06 18 12 25 64</strong></i></p>
-                    <p>Email : <a href="messages.php" target="_blank" style="color: #f47f33"><i style="color: #f47f33"><strong>santo.damien@hotmail.com</strong></i></a></p>
+                    <p>Téléphone : <i style="color: #f47f33"><strong><?= $ligne_utilisateur['portable'];?></strong></i></p>
+                    <p>Email : <a href="messages.php" target="_blank" style="color: #f47f33"><i style="color: #f47f33"><strong><?= $ligne_utilisateur['email'];?></strong></i></a></p>
                 </div>
                 <div class="col-lg-4">
                 <h4 style="color: gold">Réseaux</h4>
