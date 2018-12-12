@@ -17,9 +17,10 @@ $ligne_utilisateur = $sql-> fetch();
         <div class="col-lg-3 col-12  text-center">
         <!-- Photo, nom, prénom  -->
             <img src="img/moi.jpg" class="rounded mx-auto d-block" alt="...">
-            <h1><?php echo $ligne_utilisateur['nom'];?> <?php echo $ligne_utilisateur['prenom'];?></h1>
+            <h1><?php echo $ligne_utilisateur['nom'].' '.$ligne_utilisateur['prenom'];?></h1>
             <h4><i class="fas fa-birthday-cake"></i> <?php echo date('Y') - 1987?> ans</h4>
-            <p class="mb-5"><i class="fas fa-map-marker-alt"></i> Paris-Romainville</p>
+            <p><i class="fas fa-map-marker-alt"></i> Paris-Romainville 93</p>
+            <p><a class="btn btn-primary" href="img/CV01Final.pdf" ><i class="fa fa-download"></i> Télécharger mon CV</a></p>
         </div>
         <!-- Petite description  -->
         <div class="col-lg-9 col-12 ">
