@@ -29,19 +29,21 @@ $ligne_utilisateur = $sql-> fetch();
                     <div class="text-center form">
                         <i class="fas fa-graduation-cap text-center" style="color: orange"></i>
                     </div>
-                    <p class="pIndex">Je suis actuellement en <i style="color: orange">formation intensive</i> de 10 mois au PoleS de Pantin où j'apprends à maîtriser tous les langages de programmation dans le but de devenir un <i style="color: orange">développeur integrateur WEB</i> .</p>
+                    <p class="pIndex">Je suis actuellement à la fin d'une <i style="color: orange">formation intensive</i> de 10 mois labélisée la Grande école du numérique, où nous sommes encadrés par un formateur (Patrick Isola) du PoleS de Pantin et des formateurs de WebForce 3 afin d'apprendre à maîtriser tous les langages de programmation dans le but de pouvoir créer des sites Web dynamiques et résponsives et de valider les certifications pour devenir un <i style="color: orange">développeur integrateur Web junior</i> .</p>
                 </div>
                 <div class="col-lg-4 col-sm-12">
                     <div class="text-center form">
                         <i class="fas fa-heart" style="color: red"></i>
                     </div>
-                    <p class="pIndex"><i style="color: red">Passionné</i> par l'informatique, en quête de nouvelles <i style="color: red">connaissances</i>, je suis <i style="color: red">polyvalent</i>,<i style="color: red"> motivé</i> et <i style="color: red">détérminé</i> dans mes projets, je pratique le football donc le <i style="color: red">travail d'équipe</i> est un de mes atout majeur .</p>
+                    <p class="pIndex">Pour cela, je vais vous présenter mon site portfolio réalisé avec les langages de développement acquis au cours de cette formation tel que le <i style="color: red">HTML 5</i>, le <i style="color: red">CSS 3</i>, <i style="color: red">JavaScript</i>, ce site est résponsive grâce au framework <i style="color: red">Bootstrap 4</i>, dynamique avec du <i style="color: red">PHP 7 </i>et des requêtes <i style="color: red">SQL</i> ce qui permet de récupérer les infos enregistrées par l'utilisateur dans la base de données créée préalablement dans <i style="color: red">PHPMyAdmin</i> .</p>
                 </div>
                 <div class="col-lg-4 col-sm-12">
                     <div class="text-center form">
                         <i class="fas fa-check-square" style="color: blue"></i>
                     </div>
-                    <p class="pIndex"><i style="color: blue">Autodidacte</i> je pratique le <i style="color: blue">développement web</i> lors de mes temps libres, je développe mes <i style="color: blue">compétences</i> grâces aux outils tels que: <i style="color: blue">PHP</i>, <i style="color: blue">MySQL</i>, <i style="color: blue">JavaScript</i>, <i style="color: blue">Ajax</i>, <i style="color: blue">HTML</i> ou encore le <i style="color: blue">CSS</i> .</p>
+                    <p class="pIndex">Tous d'abord le front c'est la parti visible et accéssible par le visiteur. Comme vous pouvez le constater dans la navigation j'ai intégré un logo perso créé avec 'logogenie', des typographies comme 'Fredericka the Great' avec 'googlefont' et des icons avec 'fontawesome' <br>
+                    Maintenant le back c'est la parti accéssible seulement par l'administrateurs ceux qui leur permet de 'INSERT', 'DELETE' ou 'UPDATE' des infos dans BDD.
+                     </p>
                 </div>       
             </div><!-- fin .presentation -->
         </div><!-- Fin .col-lg-12 -->

@@ -65,7 +65,7 @@
                 <div class="col-lg-3">
                     <div class="card mb-5 mt-4 mx-2 cardForm mx-auto" style="max-width: 40rem; color: wheat">
                         <div class="card-header"><h1><?php echo $ligne_experience['titre_exp'];?> </h1><?php echo $ligne_experience['stitre_exp'];?>//<?php echo $ligne_experience['dates_exp'];?><br></div>
-                        <div class="card-body" style="color:black">
+                        <div class="card-body text-left" style="color:black">
                             <?php echo $ligne_experience['description_exp'];?>
                         </div>
                     </div>
@@ -77,5 +77,5 @@
         </div><!-- Fin .text-center -->
     </main>
        
-<!-- Je inc le footer et les lien JQuery, JS et bootstrap  -->
+<!-- Je inc le footer et les lien JQuery, JS et bootstrap -->
 <?php require 'inc/bas_page.php';?> 
